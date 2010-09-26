@@ -7,7 +7,7 @@ python ..\manage.py makemessages -a
 python ..\manage.py compilemessages
 cd ..
 
-cd shows 
+cd shows
 python ..\manage.py makemessages -a
 python ..\manage.py compilemessages
 cd ..

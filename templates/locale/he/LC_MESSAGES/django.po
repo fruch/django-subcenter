@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-16 07:09-0500\n"
+"PO-Revision-Date: 2009-12-20 22:52\n"
+"Last-Translator: <israel.fruchter@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.4.8\n"
+
+#: base.html:22
+msgid "Django profile demo"
+msgstr "הדגמה של דג'נגו פרופיל"
+
+#: base.html:23
+msgid "A django-profile demonstration application"
+msgstr "יישום הדגמה של django-profile"
+
+#: base.html:24
+msgid "Language"
+msgstr "שפה"
+
+#: base.html:30
+msgid "Movies"
+msgstr "סרטים"
+
+#: base.html:31
+msgid "Actors"
+msgstr "שחקנים"
+
+#: base.html:32
+msgid "TV Shows"
+msgstr "סדרות"
+
+#: base.html:33
+msgid "Search"
+msgstr "חיפוש"
+
+#: base.html:34
+msgid "Frontpage"
+msgstr "דף ראשי"
+
+#: base.html:36
+msgid "Profile"
+msgstr "פרופיל"
+
+#: base.html:37
+msgid "Logout"
+msgstr "התנתק"
+
+#: base.html:39
+msgid "Login"
+msgstr "הכנס"
+
+#: base.html:40
+msgid "Register"
+msgstr "הרשמה"
+
+#: front.html:3
+msgid "Front page"
+msgstr "דף ראשי"
+
+#: front.html:6
+msgid "People who have already tried this demo"
+msgstr "אנשים שניסו את הדמו הזה"
+
+#, fuzzy
+#~ msgid "name"
+#~ msgstr "שם משתמש:"
+
+#, fuzzy
+#~ msgid "Logging"
+#~ msgstr "הכנס"
+
+#~ msgid "Location"
+#~ msgstr "מיקום"
+
+#, fuzzy
+#~ msgid "Misses"
+#~ msgstr "סרטים"
+
+#, fuzzy
+#~ msgid "Function"
+#~ msgstr "מיקום"
+
+#, fuzzy
+#~ msgid "Action"
+#~ msgstr "מיקום"
+
+#, fuzzy
+#~ msgid "Line"
+#~ msgstr "הכנס"
+
+#, fuzzy
+#~ msgid "SQL Profiled"
+#~ msgstr "פרופיל"
+
+#, fuzzy
+#~ msgid "Empty set"
+#~ msgstr "לא מוגדר"
+
+#, fuzzy
+#~ msgid "None"
+#~ msgstr "סיום"
+
+#~ msgid "Home"
+#~ msgstr "בית"
+
+#, fuzzy
+#~ msgid "Language selection"
+#~ msgstr "שפה"
+
+#, fuzzy
+#~ msgid "Application"
+#~ msgstr "מיקום"
+
+#, fuzzy
+#~ msgid "content type"
+#~ msgstr "טרם נקבע"
+
+#, fuzzy
+#~ msgid "New Zealand"
+#~ msgstr "כתובת דואר אלקטרוני חדשה"
+
+#, fuzzy
+#~ msgid "Qatar"
+#~ msgstr "אווטר"
+
+#, fuzzy
+#~ msgid "Togo"
+#~ msgstr "התנתק"
+
+#, fuzzy
+#~ msgid "Username"
+#~ msgstr "שם משתמש:"
+
+#, fuzzy
+#~ msgid "E-mail address"
+#~ msgstr "כתובת דואר אלקטרוני חדשה"
+
+#, fuzzy
+#~ msgid "Password"
+#~ msgstr "שנה סיסמה"
+
+#, fuzzy
+#~ msgid "%s's profile"
+#~ msgstr "פרופיל"
+
+#, fuzzy
+#~ msgid "%s's Avatar"
+#~ msgstr "אווטר"
+
+#~ msgid "Overview"
+#~ msgstr "סקירה"
+
+#~ msgid "Personal information"
+#~ msgstr "מידע אישי"
+
+#~ msgid "Avatar"
+#~ msgstr "אווטר"
+
+#~ msgid "Remove profile"
+#~ msgstr "הסרת פרופיל"
+
+#~ msgid "E-mail change"
+#~ msgstr "שינוי דואר אלקטרוני"
+
+#~ msgid "Add e-mail"
+#~ msgstr "הוסף דואר אלקטרוני"
+
+#~ msgid "New e-mail address"
+#~ msgstr "כתובת דואר אלקטרוני חדשה"
+
+#~ msgid "Send confirmation"
+#~ msgstr "שלח אישור"
+
+#, fuzzy
+#~ msgid "E-mail change unsuccessful"
+#~ msgstr "שינוי דואר אלקטרוני"
+
+#, fuzzy
+#~ msgid "overview page"
+#~ msgstr "סקירה"
+
+#, fuzzy
+#~ msgid "E-mail change processed"
+#~ msgstr "שינוי דואר אלקטרוני"
+
+#, fuzzy
+#~ msgid "Logged out"
+#~ msgstr "התנתק"
+
+#, fuzzy
+#~ msgid "Old password"
+#~ msgstr "שנה סיסמה"
+
+#, fuzzy
+#~ msgid "New password"
+#~ msgstr "שנה סיסמה"
+
+#, fuzzy
+#~ msgid "Confirm password"
+#~ msgstr "שנה סיסמה"
+
+#, fuzzy
+#~ msgid "Change"
+#~ msgstr "שנה אווטר"
+
+#, fuzzy
+#~ msgid "Reset my password"
+#~ msgstr "שנה סיסמה"
+
+#, fuzzy
+#~ msgid "login page"
+#~ msgstr "דף ראשי"
+
+#~ msgid "Select an image from disk"
+#~ msgstr "בחר תמונה מהדיסק"
+
+#~ msgid "Done"
+#~ msgstr "סיום"
+
+#~ msgid "Delete"
+#~ msgstr "מחק"
+
+#, fuzzy
+#~ msgid "Delete personal information"
+#~ msgstr "מידע אישי"
+
+#, fuzzy
+#~ msgid "Delete your personal information"
+#~ msgstr "מידע אישי"
+
+#, fuzzy
+#~ msgid "Profile removed"
+#~ msgstr "פרופיל"
+
+#, fuzzy
+#~ msgid "Position"
+#~ msgstr "מיקום"
+
+#, fuzzy
+#~ msgid "Location information"
+#~ msgstr "מידע אישי"
+
+#, fuzzy
+#~ msgid "Define your location information"
+#~ msgstr "מידע אישי"
+
+#~ msgid "Change avatar"
+#~ msgstr "שנה אווטר"
+
+#~ msgid "Add avatar"
+#~ msgstr "הוסף אווטר"
+
+#~ msgid "Username:"
+#~ msgstr "שם משתמש:"
+
+#~ msgid "E-mail:"
+#~ msgstr "דואר אלקטרוני:"
+
+#~ msgid "Not set yet"
+#~ msgstr "טרם נקבע"
+
+#~ msgid " (Not validated)"
+#~ msgstr "(לא מאומת)"
+
+#~ msgid "Not set"
+#~ msgstr "לא מוגדר"
+
+#~ msgid "Change password"
+#~ msgstr "שנה סיסמה"
+
+#, fuzzy
+#~ msgid "Change your e-mail address"
+#~ msgstr "כתובת דואר אלקטרוני חדשה"
+
+#, fuzzy
+#~ msgid "Add your e-mail address"
+#~ msgstr "כתובת דואר אלקטרוני חדשה"
+
+#, fuzzy
+#~ msgid "Add location"
+#~ msgstr "מיקום"
+
+#, fuzzy
+#~ msgid "Change location"
+#~ msgstr "שינוי שפה"
+
+#, fuzzy
+#~ msgid "Edit your personal information"
+#~ msgstr "מידע אישי"
+
+#, fuzzy
+#~ msgid "Insert some information about you"
+#~ msgstr "מידע אישי"
+
+#, fuzzy
+#~ msgid "Public profile information"
+#~ msgstr "מידע אישי"
+
+#, fuzzy
+#~ msgid "Movie Details"
+#~ msgstr "סרטים"
+
+#, fuzzy
+#~ msgid "Movie List"
+#~ msgstr "סרטים"
+
+#, fuzzy
+#~ msgid "Add Movie"
+#~ msgstr "סרטים"
+
+#, fuzzy
+#~ msgid "Actor Details"
+#~ msgstr "שחקנים"
+
+#, fuzzy
+#~ msgid "Actor List"
+#~ msgstr "שחקנים"
+
+#, fuzzy
+#~ msgid "Add Actor"
+#~ msgstr "שחקנים"
+
+#, fuzzy
+#~ msgid "First Name"
+#~ msgstr "דף ראשי"
+
+#, fuzzy
+#~ msgid "TV Shows List"
+#~ msgstr "סדרות"
+
+#, fuzzy
+#~ msgid "Add Show"
+#~ msgstr "סדרות"
+
+#~ msgid "Welcome,"
+#~ msgstr "ברוך הבא,"
+
+#~ msgid "Documentation"
+#~ msgstr "תיעוד"
