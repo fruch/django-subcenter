@@ -12,10 +12,10 @@ pip install django
 pip install pil
 
 easy_install lxml==2.2.2
-pip install -e svn+http://django-profile.googlecode.com/svn/trunk/#egg=userprofile
-pip install -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
-pip install -e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
-pip install -e git://github.com/muhuk/django-formfieldset.git#egg=formfieldset
+pip install -I -e svn+http://django-profile.googlecode.com/svn/trunk/#egg=userprofile 
+pip install -I -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
+pip install -I -e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
+pip install -I -e git://github.com/muhuk/django-formfieldset.git#egg=formfieldset
 
 
 pip install south
@@ -31,7 +31,8 @@ pip install django-unittest-depth
 pip install coverage
 pip install django_coverage
 pip install unittest-xml-reporting
-
+pip install pylint
+pip install -e git://git.chris-lamb.co.uk/django-lint.git#egg=django-lint
 rem compoents that doesn't have setup.py
 rem pip install -e svn+http://django-flags.googlecode.com/svn/trunk/#egg=flags
 rem pip install -e svn+http://django-transmeta.googlecode.com/svn/trunk/#egg=transmeta

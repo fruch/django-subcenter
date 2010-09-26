@@ -144,7 +144,6 @@ INSTALLED_APPS = (
     
     # debugging tools
 	'debug_toolbar',
-    'django-lint'
 )
 
 I18N_URLS = True
