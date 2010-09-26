@@ -32,3 +32,5 @@
 - add a forum
 - add a news page
 - redesign the front page and genral css of the whole site
+- need to patch coverage_runner on deploy.bat
+- add pylint for all project py files [need to check why django-pylint isn't working with newest pylint]

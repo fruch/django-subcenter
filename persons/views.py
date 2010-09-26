@@ -124,7 +124,7 @@ def imdb_get_info(request, format, person_id):
                 except IMDbDataAccessError: logger.warn("imdb error")
             
             socket.setdefaulttimeout(None)
-            try: info['name'] = person['name']
+            try: info['name'] = person['name'].replace(' - IMDb', '')
             except KeyError: pass
             
             try: info['bio'] = person['mini biography']
@@ -169,7 +169,6 @@ def imdb_search_by_name(request, format, name):
             for actor in actors:
                 id = actor.personID
                 found_name = actor['long imdb canonical name']
-
                 info['list'].append({'id':id, 'name':found_name })
                 
         except:

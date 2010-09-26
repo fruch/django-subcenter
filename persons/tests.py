@@ -33,6 +33,6 @@ class PersonsTests(TestCase):
     
         self.assertEqual( t['birth_date'], u'13 June 1951')
         self.assertEqual( t['imdb_url'], u'http://www.imdb.com/name/nm1745/')
-        self.assertEqual( t['name'], u'Stellan Skarsg?rd')
+        self.assertEqual( t['name'], u'Stellan Skarsg\xe5rd')
     
 

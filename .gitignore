@@ -1,0 +1,9 @@
+*.pyc
+deploy/*
+public/*
+xmlrunner/*
+coverage_html/*
+djapian_spaces/*
+/coverage.xml
+/celery.log
+/sub.log

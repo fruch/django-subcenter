@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     
     # debugging tools
 	'debug_toolbar',
+    'django-lint'
 )
 
 I18N_URLS = True
@@ -169,7 +170,11 @@ DEBUG_TOOLBAR_PANELS = (
 DEBUG_TOOLBAR_CONFIG = { 'INTERCEPT_REDIRECTS':False,
 }
 TEST_RUNNER = 'utils.test_runner.run_tests'
+COVERAGE_CUSTOM_REPORTS = False
 COVERAGE_REPORT_HTML_OUTPUT_DIR = os.path.join(PROJECT_PATH, 'coverage_html')
+TEST_OUTPUT_VERBOSE = True
+TEST_OUTPUT_DESCRIPTIONS = True
+TEST_OUTPUT_DIR = 'xmlrunner'
 
 CARROT_BACKEND = "ghettoq.taproot.Database"
 LOG_FILE= os.path.join(PROJECT_PATH, 'sub.log')

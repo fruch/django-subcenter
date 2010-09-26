@@ -30,6 +30,7 @@ pip install django-debug-toolbar
 pip install django-unittest-depth
 pip install coverage
 pip install django_coverage
+pip install unittest-xml-reporting
 
 rem compoents that doesn't have setup.py
 rem pip install -e svn+http://django-flags.googlecode.com/svn/trunk/#egg=flags
