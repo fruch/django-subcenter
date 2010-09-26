@@ -41,7 +41,7 @@ rem pip install -e svn+http://django-flags.googlecode.com/svn/trunk/#egg=flags
 rem pip install -e svn+http://django-transmeta.googlecode.com/svn/trunk/#egg=transmeta
 echo -----  Patching  ------------
 echo 1) patch coverage_runner
-cp .\common-apps\coverage_runner.py .\deploy\Lib\site-packages\django_coveragecoverage_runner.py
+xcopy /Y .\common-apps\coverage_runner.py .\deploy\Lib\site-packages\django_coveragecoverage_runner.py
 echo 2) make direcorties
 mkdir .\public\site_media\userprofile
 echo -----  Running Tests  ------------
