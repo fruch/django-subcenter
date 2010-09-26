@@ -13,10 +13,10 @@ celery==2.0.3
 decorator==3.2.0
 distribute==0.6.10
 django-celery==2.0.3
--e git://github.com/muhuk/django-formfieldset.git@8e659d9fb440cc5b3531db4ed03ca022253783b6#egg=django_formfieldset-1.2-py2.6-dev
+-e git://github.com/muhuk/django-formfieldset.git#egg=formfieldset
 django-picklefield==0.1.6
-django-rosetta==0.5.6
-django-tagging==0.4.dev1
+-e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
+-e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
 ghettoq==0.4.4
 importlib==1.0.2
 logilab-astng==0.20.2
@@ -25,7 +25,7 @@ lxml==2.2.2
 pyparsing==1.5.5
 python-dateutil==1.5
 sqlalchemy-migrate==0.6
-userprofile==0.6
+-e svn+http://django-profile.googlecode.com/svn/trunk/#egg=userprofile 
 wikitools==1.1.1
 wsgiref==0.1.2
 djapian==2.3.1
