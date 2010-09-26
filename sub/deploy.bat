@@ -42,7 +42,8 @@ rem pip install -e svn+http://django-transmeta.googlecode.com/svn/trunk/#egg=tra
 echo -----  Patching  ------------
 echo 1) patch coverage_runner
 cp .\common-apps\coverage_runner.py .\deploy\Lib\site-packages\django_coveragecoverage_runner.py
-
+echo 2) make direcorties
+mkdir .\public\site_media\userprofile
 echo -----  Running Tests  ------------
 call test.bat
 
