@@ -21,6 +21,7 @@ pip install -e git://github.com/muhuk/django-formfieldset.git#egg=formfieldset
 
 
 pip install south
+pip install celery
 pip install django-celery
 pip install ghettoq
 
