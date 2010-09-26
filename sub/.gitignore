@@ -1,8 +1,13 @@
 *.pyc
+
 deploy/*
-public/*
+
+public/site_media/(show*|posters|headshots|avatars)*
+
 xmlrunner/*
+
 coverage_html/*
+
 djapian_spaces/*
 /coverage.xml
 /celery.log
