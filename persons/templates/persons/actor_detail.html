@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Details for " %} {{ object.title }}{% endblock %}
+{% block extracss %}
+    <style>
+        {% if LANGUAGE_BIDI %}
+        img.headshot{ 
+            float: right; 
+            margin: 1.5em 1.5em 1.5em 1.5em;
+            } 
+        {% endif %}
+         a.edit{color:red;font-size:40%} 
+    </style>
+{% endblock %}
+
+{% block content %}
+	<h1>{{ object.name }} <a class="edit" href="{{ object.get_absolute_url }}/edit/">[{% trans "Edit" %}]</a> </h1>  
+    <p> 
+        {% if object.headshot %}
+                <img class="headshot" src="{{ object.headshot.url }}"/>
+            {% endif %}
+        {{ object.bio }}
+        {% if object.movie_acted_in %}
+            <p> {% trans "Acted in" %}: 
+            {% for movie in object.movie_acted_in.all %}
+                <a href="{{ movie.get_absolute_url }}"> {{ movie.title }}</a>,
+            {% endfor %}
+            </p>
+        {% endif %}
+        
+    </p>
+    <p>
+        {% trans "IMDB ID" %}: 
+        <a href="{{ object.imdb_url }}" dir="rtl">{{ object.imdb_id }}</a>
+    </p>
+{% endblock %}

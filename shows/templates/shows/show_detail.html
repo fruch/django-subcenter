@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load comments %}
+
+{% block title %}{% trans "Details for " %} {{ object.title }}{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.6.custom.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#tabs").tabs();
+    $("#add_comments").toggle();
+    
+    $('input#add_comment').click(function () {
+      $('#add_comments').toggle();
+      var target_top = 1000;
+      $('html, body').animate({scrollTop:target_top}, 500);
+    });
+    
+  });
+  
+
+</script>
+  
+{% endblock %}
+{% block extracss %}
+    <link rel="stylesheet" href="{{ MEDIA_URL}}css/ui.all.css" type="text/css" />
+    <style>
+        #id_honeypot {
+        display: none;
+        }
+        {% if LANGUAGE_BIDI %}
+        img.poster{ 
+            float: right; 
+            margin: 1.5em 1.5em 1.5em 1.5em;
+            } 
+        {% endif %}
+        a.edit{color:red;font-size:40%} 
+        
+        span.progress-container {
+             display:inline-block;
+             width:200px;
+             height:20px;
+             background-color: rgb(146, 183, 211);
+
+        }
+
+        div.progress-inner {
+
+             height:20px;
+             background-color:rgb(91, 147, 191);
+             border-right:1px white
+             solid;
+        }
+        div.title {
+            {% if LANGUAGE_BIDI %}
+                padding-right: 4px;
+            {% else %}
+                padding-left: 4px;
+            {% endif %}
+               margin-top: -20px; color: #DDD;
+        }
+        div.rating {
+               {% if LANGUAGE_BIDI %}
+                text-align: left; 
+                padding-left: 4px;
+               {% else %}
+                text-align: right; 
+                padding-right: 4px;
+               {% endif %}
+               margin-top: -18px; color: #DDD; padding-right: 4px;
+        }
+        img.imdb-icon {
+            {% if LANGUAGE_BIDI %}
+                float: right;
+            {% endif %}
+           margin:auto;
+        }
+        
+        input#add_comment {
+        padding: 5px;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.4em;
+        margin: 0px 0px 10px 0px;
+        border: 2px solid #ccc;
+               
+        width: 150px;
+        font-size: 1.3em;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+	<h1>{{ object.title }} <a class="edit" href="{{ object.get_absolute_url }}/edit/">[{% trans "Edit" %}]</a> </h1>  
+    <p> {% if object.poster %}
+            <img class="poster" src="{{ object.poster.url }}"/>   
+        {% endif %}
+        
+    {{ object.summary }}</p>
+    
+    <p><a href="{{ object.imdb_url }}"><img class="imdb-icon" src="{{ MEDIA_URL }}images/imdb.gif" alt="loading..."/></a></p>
+
+
+    <span class="progress-container">
+       <div style="width: {{ object.imdb_rating_precentage }}% " class="progress-inner"></div>
+       <div class="title"> {% trans "IMDB Rating" %} </div>
+       <div class="rating">{{ object.imdb_rating }}/10</div>
+    </span>
+    <br/>
+    {% trans "Genre" %}: 
+    {% for genre in object.genre.all %}
+        {{ genre.name }} ,
+    {% endfor %}  <br/>
+    
+    {% trans "Cast" %}: 
+    {% for actor in object.cast.all %}
+        <a href="{{ actor.get_absolute_url }}">{{ actor.name }}</a> ,
+    {% endfor %}
+    <br/>
+  
+    <br /><br /><br />
+  
+    {% trans "Episodes Guide" %}:
+    <br />
+    <div id="tabs">
+        <ul>
+        {% for season in object.seasons_orderd %}
+            <li><a href="{{ season.get_absolute_url }}">{% trans "Season" %} {{ season.season_num }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    
+    <div>{% render_comment_list for object %}</div>
+    <input type="submit" id="add_comment" value='{% trans "Add Comment" %}'/>    
+    <div id="add_comments">{% render_comment_form for object%}
+        
+    </div>
+
+{% endblock %}

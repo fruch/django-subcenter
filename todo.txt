@@ -1,0 +1,34 @@
+- to make a delete view for movies [done]
+- to take posters from imdb [done]
+- doing a search by title from imdb [done]
+- fix a bug with spaces in the title name [done]
+- fix the css of the title coming back from search [done]
+- make imdb get movie populate Published date [done]
+- take people list of a movie [done]
+- hide imdb form parts [done]
+- add ajax icons to load from imdb [done]
+- make a pepole views/forms and etc. [done] 
+- use pagenaotr in movie list & actors list [done]
+- add search capablitiy to DB [done use xapian]
+- make rating show like a bar [ done ]
+- make translation collaspable [done]
+- add genre to movies [done]
+- add he name to database search.[done]
+- get he name from edb [done]
+- add filter to imdb summry [ not need, built in imdbpy]
+- add log to failed search in imdb [ done ] 
+- add tests [done]
+- add tv shows and episodes [done]
+- add view to translate genres [done automaticly in creation]
+- get country for movie from imdb
+- add birth date to actors and, etc.
+- add directors
+- add writers
+- add task to automaticly translate names from wiki or other [done]
+- add task to update the translation locales [done]
+
+- add celery tasks for movies/persons templates
+- add subtitle app with flags and full season zip download
+- add a forum
+- add a news page
+- redesign the front page and genral css of the whole site

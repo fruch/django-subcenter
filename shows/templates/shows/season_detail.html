@@ -1,0 +1,5 @@
+<ol>
+    {% for ch in object.episodes.all %}
+    <li><a href="{{ ch.get_absolute_url }}">{{ ch.title }}</a></li>
+    {% endfor %}
+</ol>

@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Add/Edit Movie Details" %}{% endblock %}
+{% block extracss %}
+    <style>
+        th{ {% if LANGUAGE_BIDI %}text-align: right;{% endif %}
+             background:#F4F4F8;
+        }
+        h2{ {% if LANGUAGE_BIDI %}text-align: right;{% endif %} } 
+        input{ {% if LANGUAGE_BIDI %}float: right;{% endif %} }          
+        select{ {% if LANGUAGE_BIDI %}float: right;{% endif %} } 
+        textarea{ {% if LANGUAGE_BIDI %}float: right;{% endif %} } 
+        
+        }
+
+        .msg_head {
+        cursor: pointer;
+        position: relative;
+        background:#FFCCCC;
+        }
+        .msg_body {
+        background:#F4F4F8;
+        }
+    </style>
+{% endblock %}
+{% block extrajs %}
+<script type="text/javascript">
+
+$(document).ready(function() { 
+	
+    $("span#loading").toggle();
+    
+    // ------------- make collapsable ---------------------------------
+    $("tr.msg_body").slice(2,4).toggle();
+    $("tr.msg_body").slice(4,8).toggle();
+    
+    $("tr.msg_head").eq(0).click( function () {
+         $("tr.msg_body").slice(0,2).toggle();
+    });
+    
+    $("tr.msg_head").eq(1).click( function () {
+         $("tr.msg_body").slice(2,4).toggle();
+    });
+    
+    $("tr.msg_head").eq(2).click( function () {
+         $("tr.msg_body").slice(4,8).toggle();
+    });
+    
+    // ----------- populate episode info --------------------------- 
+    $('button#populate').click(function () { 
+        var value = $('input#id_title_en').val();
+        if (value != '') {
+            clearErrorsAndShowList()
+            populateByTitle(value);
+        } else {
+            $("div#error").text("English title is empty");
+        }
+    });
+    
+    function populateByTitle(title) {
+        
+        $.ajax({
+            type: "GET",
+            url: "/shows/fill_show_episodes/json/"+title+"/",
+            dataType:  'json',
+            success:   processPopulateInfo,
+            beforeSend:  setLoading, 
+            error: processErrors,
+        });
+    }
+    
+    function processPopulateInfo(data) {
+        clearLoading();
+    }
+     
+    // --------------------- find imdb info -----------------------
+    $('button#imdb').click(function () { 
+        var value = $('input#id_title_en').val();
+        if (value != '') {
+            clearErrorsAndShowList()
+            findByTitle(value);
+        } else {
+            $("div#error").text("English title is empty");
+        }
+    });
+    
+     function get_task_status(task_id, callback)
+    {
+        $.get("/utils/task-stat/"+task_id+"/", {}  ,
+            function(data){
+                if (data.task.status == 'DONE') {
+                    callback( data.task.result);
+                } else{
+                    setTimeout(get_task_status,  500, task_id, callback);
+                }
+            },  'json' );
+    }
+
+    function findByID(value) {
+        
+        $.ajax({
+            type: "GET",
+            url: "/shows/imdb_get_info/json/"+value+"/",
+            dataType:  'json',
+            success:   wait_for_ShowData,
+            beforeSend:  setLoading, 
+            error: processErrors
+        });
+    }
+    function  wait_for_ShowData(data)
+    {
+        get_task_status(data.task_id, processShowData)
+    }
+    function processShowData(data) {
+        if (data.error) {
+            $("div#error").text("Error in getting info, try again later...");
+        } else {
+        
+            $("input#id_title_en").val(data.title);
+            $("textarea#id_summary_en").val(data.plot);
+            $("input#id_imdb_url").val(data.imdb_url);
+            $("input#id_imdb_rating").val(data.rating);
+            $("input#id_imdb_poster").val(data.cover_url);
+            $("input#id_years").val(data.years);
+            $("input#id_cast").val(data.cast);
+            $("input#id_genre").val(data.genre);
+        }
+        clearLoading();
+    }
+    
+
+
+    function findByTitle(title) {
+      
+        $.ajax({
+            type: "GET",
+            url: "/shows/imdb_search_by_title/json/"+title+"/",
+            dataType:  'json',
+            success:  wait_for_Showlist,
+            beforeSend:  setLoading, 
+            error: processErrors
+        });
+    }
+    
+    function  wait_for_Showlist(data)
+    {
+        get_task_status(data.task_id, processShowList)
+    }
+
+    function processShowList(data) {
+        if (data.error) {
+            $("div#error").text("Error in getting info, try again later...");
+        } else {
+            $.each(data.list, function(i,item){
+                    $("<a/>").text(item.title).appendTo("#showlist").bind("click", {id:item.id},function(e){
+                            clearErrors()
+                            $("input#id_imdb_id").val(e.data.id);
+                            findByID(e.data.id);
+                            }).wrap("<li/>");
+                    if ( i == 9 ) return false; });
+            
+            
+        }
+        clearLoading();
+    }
+    
+    
+    function setLoading(data) {
+        $("span#loading").show();
+    }
+    function clearLoading() {
+        $("span#loading").hide();
+    }
+    function clearErrorsAndShowList() {
+        $("div#error").text("");
+        $("ol#showlist").text("");
+    }
+    function clearErrors() {
+        $("div#error").text("");
+    }
+    
+    function processErrors(errors) {
+        $("div#error").text("Error");
+        $("div#error").append(errors.responseText);
+    }
+    
+
+
+});
+
+</script>
+{% endblock %}
+
+{% block content %}
+    
+    <button type="" id="imdb">{% trans 'Get IMDB Data' %}</button>
+    {% if edit %} <button type="" id="populate">{% trans 'Populate Episodes' %}</button>{% endif %}
+    <span id="loading">
+       <img src="{{ MEDIA_URL }}images/loading3.gif" alt="loading..."/> {% trans 'Loading data from IMDB' %} 
+    </span>
+
+    <div id="error"></div>  
+     <ol id="showlist"></ol>
+    
+    <form enctype="multipart/form-data" action="{{ request.path_info }}" method="post">{% csrf_token %}
+        {{ form.errors }}
+        <table {% if LANGUAGE_BIDI %}style="float:right"{% endif %} >{{ form.as_fieldset_table }}</table> 
+        <input type="submit" value="{% trans 'Save' %}" />
+	</form>
+    
+{% endblock %}

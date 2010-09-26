@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Details for " %} {{ object.title }}{% endblock %}
+{% block extracss %}
+{% endblock %}
+
+{% block content %}
+<p>
+<h1>{{ object.title }}</h1>
+<h3>[ <a href="{{ object.part_of.part_of.get_absolute_url }}">{{object.part_of.part_of.title }}</a>: {% trans "Season"%} {{ object.part_of.season_num }} {% trans "Episode"%} {{ object.episode_num }} ] </h3>
+{{ object.summary }}
+{% for subtitle in object.subtitles.all %}
+<h3><a href="{{ MEDIA_URL}}{{subtitle.sub_file}}"> {{ subtitle.version }}</a></h3>
+{% endfor %}  <br/>
+    
+</p>
+{% endblock %}

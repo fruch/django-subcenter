@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Add/Edit Actor Details" %}{% endblock %}
+{% block extracss %}
+    <style>
+        th{ {% if LANGUAGE_BIDI %}text-align: right;{% endif %}
+            background: #FFFFFF;
+        }
+        h2{ {% if LANGUAGE_BIDI %}text-align: right;{% endif %} } 
+        input{ {% if LANGUAGE_BIDI %}float: right;{% endif %} }          
+        select{ {% if LANGUAGE_BIDI %}float: right;{% endif %} } 
+        textarea{ {% if LANGUAGE_BIDI %}float: right;{% endif %} } 
+        
+        .msg_head {
+        cursor: pointer;
+        position: relative;
+        background:#FFCCCC;
+        }
+        .msg_body {
+        background:#F4F4F8;
+        }
+        
+    </style>
+{% endblock %}
+{% block extrajs %}
+<script type="text/javascript">
+
+$(document).ready(function() { 
+	$("span#loading").toggle();
+    
+    $("tr.msg_body").slice(2,4).toggle();
+    $("tr.msg_body").slice(4,8).toggle();
+    
+    $("tr.msg_head").eq(0).click( function () {
+         $("tr.msg_body").slice(0,2).toggle();
+    });
+    
+    $("tr.msg_head").eq(1).click( function () {
+         $("tr.msg_body").slice(2,4).toggle();
+    });
+    
+    $("tr.msg_head").eq(2).click( function () {
+         $("tr.msg_body").slice(4,6).toggle();
+    });
+    $("tr.msg_head").eq(3).click( function () {
+         $("tr.msg_body").slice(6,10).toggle();
+    });
+
+
+    
+    $('button#imdb').click(function () { 
+        var name_value = $('input#id_name_en').val();
+        var id_value = $('input#id_imdb_id').val();
+        
+        if (id_value != '') {
+            clearErrorsAndMovieList();
+            findByID(id_value);
+            return
+        }
+        if (name_value != '') {
+            clearErrorsAndMovieList();
+            findByName(name_value);
+            return
+        } else {
+            $("div#error").text("English name is empty");
+        }
+    });
+    $('button#translate').click(function () { 
+        var name_value = $('input#id_name_en').val();
+        if (name_value != '') {
+            clearErrors();
+            translate_name(name_value);
+            return
+        } else {
+            $("div#error").text("English name is empty");
+        }
+        
+    });
+    
+    function translate_name(value) {
+        $.ajax({
+            type: "GET",
+            url: "/actors/edb_translate_name/json/"+value+"/",
+            dataType:  'json',
+            success:   processTranslateData,
+            beforeSend:  setLoading, 
+            error: processErrors,
+        });
+    }
+    function findByID(value) {
+        
+        $.ajax({
+            type: "GET",
+            url: "/actors/imdb_get_info/json/"+value+"/",
+            dataType:  'json',
+            success:   processActorData,
+            beforeSend:  setLoading, 
+            error: processErrors,
+        });
+    }
+    
+    function processTranslateData(data) {
+        if (data.error) {
+            $("div#error").text("Error in getting info, try again later...");
+        } else {
+            $("input#id_name_he").val(data.he_name);
+            clearErrors();
+        }
+        clearLoading();
+ 
+    }
+    
+    function processActorData(data) {
+        if (data.error) {
+            $("div#error").text("Error in getting info, try again later...");
+        } else {
+            $("input#id_name_en").val(data.name);
+            $("textarea#id_bio_en").val(data.bio);
+            $("input#id_imdb_url").val(data.imdb_url);
+            $("input#id_imdb_mugshot").val(data.headshot);
+        
+        }
+        clearLoading();
+
+    }
+    
+     
+    
+    function findByName(title) {
+        
+        $.ajax({
+            type: "GET",
+            url: "/actors/imdb_search_by_name/json/"+title+"/",
+            dataType:  'json',
+            success:   processActorList,
+            beforeSend:  setLoading, 
+            error: processErrors,
+        });
+    }
+    
+    function processActorList(data) {
+        if (data.error) {
+            $("div#error").text("Error in getting info, try again later...");
+        } else {
+            $.each(data.list, function(i,item){
+                    $("<a/>").text(item.name).appendTo("#actorlist").bind("click", {id:item.id},function(e){
+                            clearErrors()
+                            $("input#id_imdb_id").val(e.data.id);
+                            findByID(e.data.id);
+                            }).wrap("<li/>");
+                    if ( i == 9 ) return false; });
+            
+            
+        }
+        clearLoading();
+    }
+    
+    
+    function setLoading(data) {
+        $("span#loading").toggle();
+    }
+    function clearLoading() {
+        $("span#loading").toggle();
+    }
+    function clearErrorsAndMovieList() {
+        $("div#error").text("");
+        $("ol#actorlist").text("");
+    }
+    function clearErrors() {
+        $("div#error").text("");
+    }
+    
+    function processErrors(errors) {
+        alert(errors.status )
+        alert(errors.responseText )
+        $("div#error").text("Error");
+        $("div#error").append(errors.responseText);
+    }
+    
+
+
+});
+
+</script>
+{% endblock %}
+
+{% block content %}
+    
+    <button type="" id="imdb">{% trans 'Get IMDB Data' %}</button>
+    
+    <button type="" id="translate">{% trans 'Translate Name' %}</button>
+    <span id="loading">
+       <img src="{{ MEDIA_URL }}images/loading3.gif" alt="loading..."/> {% trans 'Loading data from IMDB' %} 
+    </span>
+
+    <div id="error"></div>  
+    <ol id="actorlist"></ol>  
+    
+    <form enctype="multipart/form-data" action="{{ request.path_info }}" method="post">{% csrf_token %}
+        {{ form.errors }}
+        <table {% if LANGUAGE_BIDI %}style="float:right"{% endif %} >{{ form.as_fieldset_table }}</table> 
+        <input type="submit" value="{% trans 'Save' %}" />
+	</form>
+    
+{% endblock %}

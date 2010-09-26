@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-16 07:09-0500\n"
+"PO-Revision-Date: 2009-11-18 18:19\n"
+"Last-Translator: <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.4.8\n"
+
+#: forms.py:19
+msgid "English"
+msgstr "אנגלית"
+
+#: forms.py:21
+msgid "Hebrew"
+msgstr "עברית"
+
+#: forms.py:23
+msgid "Russian"
+msgstr ""
+
+#: forms.py:26
+msgid "Actor Details"
+msgstr "פרטי שחקן"
+
+#: forms.py:27
+msgid "Your tags are shared"
+msgstr "התגים שלך משותפים"
+
+#: forms.py:43
+msgid "name can't be empty"
+msgstr "שם לא יכול להיות ריק"
+
+#: forms.py:48
+#, python-format
+msgid "%s already exists"
+msgstr "%s כבר קיים"
+
+#: models.py:15
+msgid "Headshot"
+msgstr "תמונה"
+
+#: models.py:17
+msgid "Created by"
+msgstr "נוצר על ידי"
+
+#: models.py:19
+msgid "Created at"
+msgstr "נערך ב"
+
+#: models.py:24
+msgid "IMDB id"
+msgstr "מזהה ב-IMDB"
+
+#: models.py:25
+msgid "IMDB Mugshot"
+msgstr "IMDB Mugshot"
+
+#: models.py:26
+msgid "IMDB Url"
+msgstr "כתובת ב-IMDB "
+
+#: models.py:36
+msgid "Name"
+msgstr "שם"
+
+#: models.py:39
+msgid "Biography"
+msgstr "ביוגרפיה"
+
+#: templates/persons/actor_detail.html:4
+msgid "Details for "
+msgstr "פרטים עבור"
+
+#: templates/persons/actor_detail.html:18 templates/persons/actor_list.html:81
+msgid "Edit"
+msgstr "ערוך"
+
+#: templates/persons/actor_detail.html:25
+msgid "Acted in"
+msgstr "שיחק ב"
+
+#: templates/persons/actor_detail.html:34
+msgid "IMDB ID"
+msgstr "מזהה ב-IMDB"
+
+#: templates/persons/actor_list.html:6
+msgid "Actor List"
+msgstr "רשימת שחקנים"
+
+#: templates/persons/actor_list.html:24
+msgid "Are you sure?"
+msgstr "האם אתה בטוח ?"
+
+#: templates/persons/actor_list.html:27
+msgid "yes"
+msgstr "כן"
+
+#: templates/persons/actor_list.html:28
+msgid "no"
+msgstr "לא"
+
+#: templates/persons/actor_list.html:70
+msgid "List of all Actors tagged"
+msgstr "רשימה של כל השחקנים שתוייגו ב"
+
+#: templates/persons/actor_list.html:72
+msgid "List of all Actors"
+msgstr "רשימת כל השחקנים"
+
+#: templates/persons/actor_list.html:75
+msgid "Add Actor"
+msgstr "הוספת שחקן"
+
+#: templates/persons/actor_list.html:82
+msgid "Delete"
+msgstr "מחק"
+
+#: templates/persons/actor_list.html:83
+msgid "Tags"
+msgstr "תגיות"
+
+#: templates/persons/edit.html:4
+msgid "Add/Edit Actor Details"
+msgstr "הוסף\\ערוך פרטי שחקן"
+
+#: templates/persons/edit.html:190
+msgid "Get IMDB Data"
+msgstr "קבל נתונים מ-IMDB "
+
+#: templates/persons/edit.html:192
+msgid "Translate Name"
+msgstr "תרגם שם"
+
+#: templates/persons/edit.html:194
+msgid "Loading data from IMDB"
+msgstr "טוען נתונים מ-IMDB"
+
+#: templates/persons/edit.html:203
+msgid "Save"
+msgstr "שמור"

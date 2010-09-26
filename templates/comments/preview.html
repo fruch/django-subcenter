@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Preview your comment" %}{% endblock %}
+
+{% block content %}
+  {% load comments %}
+<style>
+        
+label {	
+    {% if LANGUAGE_BIDI %}
+        float: right;
+        text-align: left;
+        margin-left: 15px;
+    {% else %}
+        float: left;
+        text-align: right;
+        margin-right: 15px;
+    {% endif %}
+	width: 100px;
+	padding-top: 5px;
+}
+
+
+#contact-area {
+	width: 600px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 1px solid #900;
+
+}
+
+#contact-area input.submit-post,  #contact-area input.submit-preview {
+	{% if LANGUAGE_BIDI %}
+        float: left;
+    {% else %}
+        float: right;
+    {% endif %}
+    
+    width: 100px;
+    font-size: 1.3em;
+    margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+</style>
+<div id="page-wrap">
+  <form action="{% comment_form_target %}" method="post">{% csrf_token %}
+    
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+    {% if form.errors %}
+    <h1>{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h1>
+    {% else %}
+    <h1>{% trans "Preview your comment" %}</h1>
+      <blockquote>{{ comment|linebreaks }}</blockquote>
+      <p>
+      {% trans "and" %} <input type="submit" name="submit" class="submit-post" value="{% trans "Post your comment" %}" id="submit" /> {% trans "or make changes" %}:
+      </p>
+    {% endif %}
+    <div id="contact-area">
+    {% for field in form %}
+      {% if field.is_hidden %}
+        {{ field }}
+      {% else %}
+        {% if field.errors %}{{ field.errors }}{% endif %}
+        <p
+          {% if field.errors %} class="error"{% endif %}
+          {% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>
+          {{ field.label_tag }} {{ field }}
+        </p>
+      {% endif %}
+    {% endfor %}
+    <p class="submit">
+    <input type="submit" name="submit" class="submit-post" value="{% trans "Post" %}" />
+    <input type="submit" name="preview" class="submit-preview" value="{% trans "Preview" %}" />
+    </p>
+    </div>
+  </form>
+</div>
+{% endblock %}

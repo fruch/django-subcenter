@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-16 07:09-0500\n"
+"PO-Revision-Date: 2010-05-13 16:27\n"
+"Last-Translator: <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.4.8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: forms.py:19
+msgid "English"
+msgstr "Английский"
+
+#: forms.py:21
+msgid "Hebrew"
+msgstr "Иврит"
+
+#: forms.py:23
+msgid "Russian"
+msgstr "Русский"
+
+#: forms.py:26
+msgid "Actor Details"
+msgstr "Актер Подробности"
+
+#: forms.py:27
+msgid "Your tags are shared"
+msgstr "Ваши метки являются общими"
+
+#: forms.py:43
+msgid "name can't be empty"
+msgstr "Имя не может быть пустым"
+
+#: forms.py:48
+#, python-format
+msgid "%s already exists"
+msgstr "% Уже содержит"
+
+#: models.py:15
+msgid "Headshot"
+msgstr "Headshot"
+
+#: models.py:17
+msgid "Created by"
+msgstr "Создано"
+
+#: models.py:19
+msgid "Created at"
+msgstr "Создано"
+
+#: models.py:24
+msgid "IMDB id"
+msgstr "IMDB ID"
+
+#: models.py:25
+msgid "IMDB Mugshot"
+msgstr "IMDB Mugshot"
+
+#: models.py:26
+msgid "IMDB Url"
+msgstr "IMDB Url"
+
+#: models.py:36
+msgid "Name"
+msgstr "Имя"
+
+#: models.py:39
+msgid "Biography"
+msgstr "Биография"
+
+#: templates/persons/actor_detail.html:4
+msgid "Details for "
+msgstr "Подробнее о"
+
+#: templates/persons/actor_detail.html:18 templates/persons/actor_list.html:81
+msgid "Edit"
+msgstr "Редактировать"
+
+#: templates/persons/actor_detail.html:25
+msgid "Acted in"
+msgstr "Снимался в"
+
+#: templates/persons/actor_detail.html:34
+msgid "IMDB ID"
+msgstr "IMDB ID"
+
+#: templates/persons/actor_list.html:6
+msgid "Actor List"
+msgstr "Актер Список"
+
+#: templates/persons/actor_list.html:24
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+#: templates/persons/actor_list.html:27
+msgid "yes"
+msgstr "да"
+
+#: templates/persons/actor_list.html:28
+msgid "no"
+msgstr "нет"
+
+#: templates/persons/actor_list.html:70
+msgid "List of all Actors tagged"
+msgstr "Список всех участников отметил"
+
+#: templates/persons/actor_list.html:72
+msgid "List of all Actors"
+msgstr "Список всех участников"
+
+#: templates/persons/actor_list.html:75
+msgid "Add Actor"
+msgstr "Добавить актер"
+
+#: templates/persons/actor_list.html:82
+msgid "Delete"
+msgstr "Удалять"
+
+#: templates/persons/actor_list.html:83
+msgid "Tags"
+msgstr "Теги"
+
+#: templates/persons/edit.html:4
+msgid "Add/Edit Actor Details"
+msgstr "Добавить / Изменить Актер Подробности"
+
+#: templates/persons/edit.html:190
+msgid "Get IMDB Data"
+msgstr "Получить данных IMDB"
+
+#: templates/persons/edit.html:192
+msgid "Translate Name"
+msgstr "Перевести название"
+
+#: templates/persons/edit.html:194
+msgid "Loading data from IMDB"
+msgstr "Загрузка данных из IMDB"
+
+#: templates/persons/edit.html:203
+msgid "Save"
+msgstr "Экономить"

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Search Page" %}{% endblock %}
+{% block extracss %}
+<style>
+    .highlight { background-color: yellow }
+</style>
+{% endblock %}
+{% block extrajs %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.highlight-3.yui.js"></script>
+<script type="text/javascript">
+	$(function() {
+        var val = $('input#id_query').val()
+        if (val != '') {
+            $('#results').removeHighlight()        
+            $('#results').highlight(val) 
+        }
+    
+	});
+</script>
+{% endblock %}
+
+
+{% block content %}
+    <div id="search_form">
+        <form action='./' method='GET'>
+            {{ form.as_p }}
+            <p><input type="submit" value="Search!"/></p>
+        </form>
+    </div>
+    <div id="results">
+    {% if results %}
+      <h2>{%trans "Search results"%}:</h2>
+      <ol>
+        {% for hit in results %}
+          <li><a href="{{hit.instance.get_absolute_url}}">{{ hit.instance }}</a>- {{ hit.percent }}% {%trans "match"%}</li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+    </div>
+
+{% endblock %}

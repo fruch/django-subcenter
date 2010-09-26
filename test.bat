@@ -1,0 +1,1 @@
+python ./manage.py test movies shows utils persons %*
