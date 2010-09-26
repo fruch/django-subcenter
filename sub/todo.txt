@@ -26,11 +26,14 @@
 - add writers
 - add task to automaticly translate names from wiki or other [done]
 - add task to update the translation locales [done]
+- add pylint for all project py files [done]
+- move to nose testing [done]
+- uploaded to a git repo [done]
+- patched a hudson server to compile from git [done]
 
+- check why flag app isn't working in chrome/iexplore
 - add celery tasks for movies/persons templates
 - add subtitle app with flags and full season zip download
 - add a forum
 - add a news page
 - redesign the front page and genral css of the whole site
-- need to patch coverage_runner on deploy.bat
-- add pylint for all project py files [need to check why django-pylint isn't working with newest pylint]

@@ -10,12 +10,12 @@ virtualenv --no-site-packages --distribute ./deploy
 call .\deploy\Scripts\activate.bat
 
 echo ----- Installing dependecies ------
+easy_install lxml==2.2.2
 pip install -q -r requirements.pip
 pip install -q -r requirements-test.pip
 REM pip install django
 REM pip install pil
 
-REM easy_install lxml==2.2.2
 REM pip install -e svn+http://django-profile.googlecode.com/svn/trunk/#egg=userprofile 
 REM pip install -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
 REM pip install -e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
