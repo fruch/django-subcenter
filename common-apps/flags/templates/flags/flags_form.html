@@ -2,6 +2,6 @@
 <form action="{{ i18n_prefix }}setlang/" method="post">{% csrf_token %}
 <input name="next" type="hidden" {% if redirect %}value="{{ redirect }}"{% endif %} />
 {% for lang in LANGUAGES %}
-<input name="language" type="image" value="{{ lang.0 }}" src="{{ flags_url }}flag_{{ lang.0 }}.jpg" onclick="this.form.submit()" title="{% trans lang.1 %}" />
+<input name="language" type="image" value="{{ lang.0 }}" src="{{ flags_url }}flag_{{ lang.0 }}.jpg" onclick="javascript:this.form.submit()" title="{% trans lang.1 %}" />
 {% endfor %}
 </form>

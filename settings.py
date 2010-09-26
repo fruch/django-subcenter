@@ -87,8 +87,8 @@ SECRET_KEY = 'g_bz8f3x4#gri(1vjnrj8dfi5!&+qi&rt21-$%ii*nhku!olac'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-	'flags.loaders.filesystem.load_template_source',
-	'flags.loaders.app_directories.load_template_source',
+    'flags.loaders.filesystem.load_template_source',
+    'flags.loaders.app_directories.load_template_source',
 
 #     'django.template.loaders.eggs.Loader',
 )
@@ -99,8 +99,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.locale.LocaleMiddleware'
 )
 
 ROOT_URLCONF = 'sub.urls'
@@ -154,7 +154,7 @@ FORCE_LOWERCASE_TAGS = True
 
 DJAPIAN_DATABASE_PATH = os.path.join(PROJECT_PATH, 'djapian_spaces')
 
-#INTERNAL_IPS = ('127.0.0.1',)
+INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_PANELS = (
 	    'debug_toolbar.panels.version.VersionDebugPanel',
 	    'debug_toolbar.panels.timer.TimerDebugPanel',

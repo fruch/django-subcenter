@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-16 07:09-0500\n"
+"POT-Creation-Date: 2010-09-26 08:56+0200\n"
 "PO-Revision-Date: 2009-11-18 18:19\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,140 +16,141 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.4.8\n"
 
-#: forms.py:16
+#: .\forms.py:16
 msgid "English"
 msgstr "אנגלית"
 
-#: forms.py:18
+#: .\forms.py:18
 msgid "Hebrew"
 msgstr "עברית"
 
-#: forms.py:21
+#: .\forms.py:21
 msgid "Movie Details"
 msgstr "פרטי הסרט"
 
-#: forms.py:31
+#: .\forms.py:31
 msgid "Your tags are shared"
 msgstr "התגים שלך משותפים"
 
-#: forms.py:56
+#: .\forms.py:56
 msgid "title can't be empty"
 msgstr "הכותרת אינה יכולה להיות ריקה"
 
-#: forms.py:61
+#: .\forms.py:61
 #, python-format
 msgid "%s already exists"
 msgstr "%s כבר קיים"
 
-#: models.py:24
+#: .\models.py:24
 msgid "The title"
 msgstr "כותרת"
 
-#: models.py:29
+#: .\models.py:29
 msgid "The summary"
 msgstr "סיכום"
 
-#: models.py:32
+#: .\models.py:32
 msgid "Publish year"
 msgstr "יצא לאור בשנת"
 
-#: models.py:34
+#: .\models.py:34
 msgid "Created by"
 msgstr "נוצר ע\"י"
 
-#: models.py:36
+#: .\models.py:36
 msgid "Created at"
 msgstr "נוצר ב"
 
-#: models.py:40
+#: .\models.py:40
 msgid "IMDB Url"
 msgstr "כתובת ב-IMDB "
 
-#: models.py:41
+#: .\models.py:41
 msgid "IMDB id"
 msgstr "מזהה ב-IMDB "
 
-#: models.py:42 templates/movies/movie_detail.html:69
+#: .\models.py:42 .\templates\movies\movie_detail.html.py:69
 msgid "IMDB Rating"
 msgstr "דירוג ב-IMDB "
 
-#: models.py:43
+#: .\models.py:43
 msgid "IMDB Poster"
 msgstr "פוסטר ב-IMDB"
 
-#: models.py:44 templates/movies/movie_detail.html:77
+#: .\models.py:44 .\templates\movies\movie_detail.html.py:77
 msgid "Genre"
 msgstr "ז 'אנר"
 
-#: models.py:47
+#: .\models.py:47
 msgid "Poster"
 msgstr "פוסטר"
 
-#: models.py:53
+#: .\models.py:53
 msgid "Country"
 msgstr "מדינה"
 
-#: models.py:55 templates/movies/movie_detail.html:73
+#: .\models.py:55 .\templates\movies\movie_detail.html.py:73
 msgid "Cast"
 msgstr "צוות שחקנים"
 
-#: models.py:58 templates/movies/movie_list.html:84
+#: .\models.py:58 .\templates\movies\movie_list.html.py:84
 msgid "Tags"
 msgstr "תגיות"
 
-#: templates/movies/edit.html:4
+#: .\templates\movies\edit.html.py:4
 msgid "Add/Edit Movie Details"
 msgstr "פרטי הסרט"
 
-#: templates/movies/edit.html:148
+#: .\templates\movies\edit.html.py:148
 msgid "Get IMDB Data"
 msgstr "קבל נתונים מ-IMDB"
 
-#: templates/movies/edit.html:150
+#: .\templates\movies\edit.html.py:150
 msgid "Loading data from IMDB"
 msgstr "טוען נתונים מ-IMDB"
 
-#: templates/movies/edit.html:159
+#: .\templates\movies\edit.html.py:159
 msgid "Save"
 msgstr "שמור"
 
-#: templates/movies/movie_detail.html:4
+#: .\templates\movies\movie_detail.html.py:4
 msgid "Details for "
 msgstr "פרטים עבור"
 
-#: templates/movies/movie_detail.html:58 templates/movies/movie_list.html:82
+#: .\templates\movies\movie_detail.html.py:58
+#: .\templates\movies\movie_list.html.py:82
 msgid "Edit"
 msgstr "ערוך"
 
-#: templates/movies/movie_list.html:6
+#: .\templates\movies\movie_list.html.py:6
 msgid "Movie List"
 msgstr "פרטי הסרט"
 
-#: templates/movies/movie_list.html:24
+#: .\templates\movies\movie_list.html.py:24
 msgid "Are you sure?"
 msgstr "האם אתה בטוח?"
 
-#: templates/movies/movie_list.html:27
+#: .\templates\movies\movie_list.html.py:27
 msgid "yes"
 msgstr "כן"
 
-#: templates/movies/movie_list.html:28
+#: .\templates\movies\movie_list.html.py:28
 msgid "no"
 msgstr "לא"
 
-#: templates/movies/movie_list.html:71
+#: .\templates\movies\movie_list.html.py:71
 msgid "List of all Movies tagged"
 msgstr "רשימה של כל הסרטים המתוייגים ב"
 
-#: templates/movies/movie_list.html:73
+#: .\templates\movies\movie_list.html.py:73
 msgid "List of all Movies"
 msgstr "רשימת כל הסרטים"
 
-#: templates/movies/movie_list.html:76
+#: .\templates\movies\movie_list.html.py:76
 msgid "Add Movie"
 msgstr "הוסף סרט"
 
-#: templates/movies/movie_list.html:83
+#: .\templates\movies\movie_list.html.py:83
 msgid "Delete"
 msgstr "מחק"
 

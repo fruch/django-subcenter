@@ -7,3 +7,4 @@ djapian_spaces/*
 /coverage.xml
 /celery.log
 /sub.log
+/pip-log.txt

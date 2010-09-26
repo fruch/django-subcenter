@@ -23,7 +23,17 @@
 				<p>{% trans "A django-profile demonstration application" %}</p>
         {% trans 'Language' %}
 	{% load flags_lib %}{% flags_form %}
-                
+    {% get_available_languages as LANGUAGES %}
+    <form action="/i18n/setlang/" method="post" style="display: inline;">{% csrf_token %}
+      <div style="display: inline;">
+        <select name="language" onchange="javascript:form.submit()">
+          {% for lang in LANGUAGES %}
+            <option value="{{ lang.0 }}"{% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>{{ lang.1 }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </form>
+    
 			</div>
 			<div class="span-8 last">
 				<ul class="hmenu large three">

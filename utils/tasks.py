@@ -185,7 +185,7 @@ class maintenanceTranslateTask(PeriodicTask):
         curr = os.getcwd()
         logger.info(curr)
         try:
-            for m in ['movies', 'persons','shows', 'common-apps/userprofile', 'common-apps/transmeta',  'profiles']:
+            for m in ['movies', 'persons','shows',  'profiles']:
                 os.chdir(m)
                 logger.info("calling command "+ m)
                 call_command('makemessages',all=True)
@@ -205,6 +205,7 @@ class maintenanceTranslateTask(PeriodicTask):
             call_command('compilemessages')
         except Exception, e:
             logger.info ( "Exception:  %s" % str( e) )
+            raise e
         finally:
              os.chdir(curr)
         return True

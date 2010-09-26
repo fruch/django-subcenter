@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-16 07:09-0500\n"
+"POT-Creation-Date: 2010-09-26 08:56+0200\n"
 "PO-Revision-Date: 2010-05-10 13:31\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,159 +17,174 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.4.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: forms.py:16
+#: .\forms.py:16
 msgid "English"
 msgstr "אנגלית"
 
-#: forms.py:18
+#: .\forms.py:18
 msgid "Hebrew"
 msgstr "עברית"
 
-#: forms.py:21
+#: .\forms.py:20
+msgid "Russian"
+msgstr ""
+
+#: .\forms.py:23
 msgid "Show Details"
 msgstr "הצג פרטים"
 
-#: forms.py:29
+#: .\forms.py:31
 msgid "Your tags are shared"
 msgstr "התגים שלך משותפים"
 
-#: forms.py:53
+#: .\forms.py:55
 msgid "title can't be empty"
 msgstr "כותרת לא יכול להיות ריקה"
 
-#: forms.py:58
+#: .\forms.py:60
 #, python-format
 msgid "%s already exists"
 msgstr "%s כבר קיים"
 
-#: models.py:19 models.py:83 models.py:103
+#: .\models.py:20 .\models.py:84 .\models.py:104
 msgid "The title"
 msgstr "כותרת"
 
-#: models.py:24 models.py:105
+#: .\models.py:25 .\models.py:106
 msgid "The summary"
 msgstr "סיכום"
 
-#: models.py:27
+#: .\models.py:28
 msgid "Poster"
 msgstr "פוסטר"
 
-#: models.py:29 templates/shows/show_detail.html:87
+#: .\models.py:30 .\templates\shows\show_detail.html.py:115
 msgid "Genre"
 msgstr "ז'אנר"
 
-#: models.py:31 templates/shows/show_detail.html:92
+#: .\models.py:32 .\templates\shows\show_detail.html.py:120
 msgid "Cast"
 msgstr "צוות"
 
-#: models.py:33
+#: .\models.py:34
 msgid "Running Years"
 msgstr "שנים"
 
-#: models.py:37
+#: .\models.py:38
 msgid "IMDB id"
 msgstr "הורדת id"
 
-#: models.py:38 templates/shows/show_detail.html:83
+#: .\models.py:39 .\templates\shows\show_detail.html.py:111
 msgid "IMDB Rating"
 msgstr ""
 
-#: models.py:39
+#: .\models.py:40
 msgid "IMDB Poster"
 msgstr ""
 
-#: models.py:42
+#: .\models.py:43
 msgid "Created by"
 msgstr ""
 
-#: models.py:44
+#: .\models.py:45
 msgid "Created at"
 msgstr ""
 
-#: models.py:46 templates/shows/show_list.html:86
+#: .\models.py:47 .\templates\shows\show_list.html.py:86
 msgid "Tags"
 msgstr "תגיות"
 
-#: models.py:85 models.py:112
+#: .\models.py:86 .\models.py:113
 msgid "Belongs to"
 msgstr "שייך"
 
-#: models.py:88
+#: .\models.py:89
 msgid "Season Number"
 msgstr "פרק מספר"
 
-#: models.py:110
+#: .\models.py:111
 msgid "Episode Number"
 msgstr "עונה מספר"
 
-#: templates/shows/episode_detail.html:4 templates/shows/show_detail.html:4
+#: .\models.py:116
+msgid "Substitles"
+msgstr ""
+
+#: .\templates\shows\episode_detail.html.py:4
+#: .\templates\shows\show_detail.html.py:5
 msgid "Details for "
 msgstr ""
 
-#: templates/shows/episode_detail.html:11 templates/shows/show_detail.html:105
+#: .\templates\shows\episode_detail.html.py:11
+#: .\templates\shows\show_detail.html.py:133
 msgid "Season"
 msgstr "עונה"
 
-#: templates/shows/episode_detail.html:11
+#: .\templates\shows\episode_detail.html.py:11
 msgid "Episode"
 msgstr "פרק"
 
-#: templates/shows/show_detail.html:71 templates/shows/show_list.html:84
+#: .\templates\shows\show_detail.html.py:99
+#: .\templates\shows\show_list.html.py:84
 msgid "Edit"
 msgstr "ערוך"
 
-#: templates/shows/show_detail.html:100
+#: .\templates\shows\show_detail.html.py:128
 msgid "Episodes Guide"
 msgstr "מדריך פרקים"
 
-#: templates/shows/show_edit.html:4
+#: .\templates\shows\show_detail.html.py:139
+msgid "Add Comment"
+msgstr ""
+
+#: .\templates\shows\show_edit.html.py:4
 msgid "Add/Edit Movie Details"
 msgstr "הוספה / עריכה של פרטי הסרט"
 
-#: templates/shows/show_edit.html:197
+#: .\templates\shows\show_edit.html.py:197
 msgid "Get IMDB Data"
 msgstr ""
 
-#: templates/shows/show_edit.html:198
+#: .\templates\shows\show_edit.html.py:198
 msgid "Populate Episodes"
 msgstr "אכלס פרקים"
 
-#: templates/shows/show_edit.html:200
+#: .\templates\shows\show_edit.html.py:200
 msgid "Loading data from IMDB"
 msgstr "טעינת נתונים מ IMDB"
 
-#: templates/shows/show_edit.html:209
+#: .\templates\shows\show_edit.html.py:209
 msgid "Save"
 msgstr "שמור"
 
-#: templates/shows/show_list.html:6
+#: .\templates\shows\show_list.html.py:6
 msgid "TV Shows List"
 msgstr "רשימת סדרות"
 
-#: templates/shows/show_list.html:25
+#: .\templates\shows\show_list.html.py:25
 msgid "Are you sure?"
 msgstr "האם אתה בטוח?"
 
-#: templates/shows/show_list.html:28
+#: .\templates\shows\show_list.html.py:28
 msgid "yes"
 msgstr "כן"
 
-#: templates/shows/show_list.html:29
+#: .\templates\shows\show_list.html.py:29
 msgid "no"
 msgstr "לא"
 
-#: templates/shows/show_list.html:73
+#: .\templates\shows\show_list.html.py:73
 msgid "List of all Shows tagged"
 msgstr "רשימת כל הסדרות המתוייגות ב"
 
-#: templates/shows/show_list.html:75
+#: .\templates\shows\show_list.html.py:75
 msgid "List of all Shows"
 msgstr "רשימת כל הסדרות"
 
-#: templates/shows/show_list.html:78
+#: .\templates\shows\show_list.html.py:78
 msgid "Add Show"
 msgstr "הוסף סידרה"
 
-#: templates/shows/show_list.html:85
+#: .\templates\shows\show_list.html.py:85
 msgid "Delete"
 msgstr "למחוק"
