@@ -10,32 +10,34 @@ virtualenv --no-site-packages --distribute ./deploy
 call .\deploy\Scripts\activate.bat
 
 echo ----- Installing dependecies ------
-pip install django
-pip install pil
+pip install -q -r requirements.pip
+pip install -q -r requirements-test.pip
+REM pip install django
+REM pip install pil
 
-easy_install lxml==2.2.2
-pip install -e svn+http://django-profile.googlecode.com/svn/trunk/#egg=userprofile 
-pip install -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
-pip install -e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
-pip install -e git://github.com/muhuk/django-formfieldset.git#egg=formfieldset
+REM easy_install lxml==2.2.2
+REM pip install -e svn+http://django-profile.googlecode.com/svn/trunk/#egg=userprofile 
+REM pip install -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
+REM pip install -e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
+REM pip install -e git://github.com/muhuk/django-formfieldset.git#egg=formfieldset
 
 
-pip install south
-pip install celery
-pip install django-celery
-pip install ghettoq
+REM pip install south
+REM pip install celery
+REM pip install django-celery
+REM pip install ghettoq
 
-pip install imdbpy
-pip install wikitools
+REM pip install imdbpy
+REM pip install wikitools
 
 rem debugging and testing
-pip install django-debug-toolbar
-pip install django-unittest-depth
-pip install coverage
-pip install django_coverage
-pip install unittest-xml-reporting
-pip install pylint
-pip install -e git://git.chris-lamb.co.uk/django-lint.git#egg=django-lint
+REM pip install django-debug-toolbar
+REM pip install django-unittest-depth
+REM pip install coverage
+REM pip install django_coverage
+REM pip install unittest-xml-reporting
+REM pip install pylint
+REM pip install -e git://git.chris-lamb.co.uk/django-lint.git#egg=django-lint
 rem compoents that doesn't have setup.py
 rem pip install -e svn+http://django-flags.googlecode.com/svn/trunk/#egg=flags
 rem pip install -e svn+http://django-transmeta.googlecode.com/svn/trunk/#egg=transmeta

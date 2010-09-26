@@ -1,19 +1,7 @@
 from django.conf import settings
-from django_coverage.coverage_runner import run_tests as run_tests_orig
+from django_nose import NoseTestSuiteRunner
 
-USAGE = """\
-Custom test runner to allow testing of celery delayed tasks.
-"""
-
-def run_tests(test_labels, *args, **kwargs):
-    """Django test runner allowing testing of celery delayed tasks.
-
-    All tasks are run locally, not in a worker.
-
-    To use this runner set ``settings.TEST_RUNNER``::
-
-        TEST_RUNNER = "celery.contrib.test_runner.run_tests"
-
-    """
-    settings.CELERY_ALWAYS_EAGER = True
-    return run_tests_orig(test_labels, *args, **kwargs)
+class MyTestRunner(NoseTestSuiteRunner):
+    def __init__(self, *args, **kwargs):
+        settings.CELERY_ALWAYS_EAGER = True
+        super(NoseTestSuiteRunner, self).__init__(*args, **kwargs)

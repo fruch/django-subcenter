@@ -175,16 +175,21 @@ class maintenanceReIndexTask(PeriodicTask):
         logger = self.get_logger(**kwargs)
         logger.info("Running periodic task!")
         call_command('index',rebuild_index=True)
-
+        return True
+        
 class maintenanceTranslateTask(PeriodicTask):
     run_every = timedelta(minutes=3)
 
     def run(self, **kwargs):
         logger = self.get_logger(**kwargs)
         logger.info("Running periodic task!")
+        
         curr = os.getcwd()
         logger.info(curr)
+        
         try:
+            os.system ("lang_comp.bat 1>> lang_comp.log 2>&1")
+            '''
             for m in ['movies', 'persons','shows',  'profiles']:
                 os.chdir(m)
                 logger.info("calling command "+ m)
@@ -203,6 +208,7 @@ class maintenanceTranslateTask(PeriodicTask):
             logger.info("coming back to curr folder")
             os.chdir(curr)
             call_command('compilemessages')
+            '''
         except Exception, e:
             logger.info ( "Exception:  %s" % str( e) )
             raise e

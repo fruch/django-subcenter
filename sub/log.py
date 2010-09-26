@@ -3,7 +3,7 @@ import threading
 import logging
 # django
 from django.conf import settings
-
+import imdb
 #===============================================================================
 # Globals
 #===============================================================================
@@ -23,4 +23,7 @@ def get_logger():
     logger.setLevel(getattr(settings, 'LOG_LEVEL', logging.NOTSET))
     
     setattr(_LOCALS, 'logger', logger)
+    
+    imdb._logging.setLevel(getattr(settings, 'LOG_LEVEL', logging.NOTSET))
+    
     return logger

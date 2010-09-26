@@ -1,6 +1,6 @@
 @echo off
 set OLD_PATH=%PATH%
-set PATH=%PATH%;C:\sub\sub\ext_utils\xgettext\bin
+set PATH=%PATH%;%CD%\ext_utils\xgettext\bin
 
 cd movies 
 python ..\manage.py makemessages -a

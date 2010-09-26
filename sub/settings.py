@@ -113,6 +113,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+
     # django internals
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,7 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.comments',
-    
+   
     # main application code
 	'shows',
 	'movies',
@@ -142,8 +143,10 @@ INSTALLED_APPS = (
     'flags',
     'south',
     
-    # debugging tools
-	'debug_toolbar',
+  # debugging tools
+    'debug_toolbar',
+    'django_nose',
+
 )
 
 I18N_URLS = True
@@ -168,15 +171,10 @@ DEBUG_TOOLBAR_PANELS = (
 	)
 DEBUG_TOOLBAR_CONFIG = { 'INTERCEPT_REDIRECTS':False,
 }
-TEST_RUNNER = 'utils.test_runner.run_tests'
-COVERAGE_CUSTOM_REPORTS = False
-COVERAGE_REPORT_HTML_OUTPUT_DIR = os.path.join(PROJECT_PATH, 'coverage_html')
-TEST_OUTPUT_VERBOSE = True
-TEST_OUTPUT_DESCRIPTIONS = True
-TEST_OUTPUT_DIR = 'xmlrunner'
+TEST_RUNNER = 'utils.test_runner.MyTestRunner'
 
 CARROT_BACKEND = "ghettoq.taproot.Database"
 LOG_FILE= os.path.join(PROJECT_PATH, 'sub.log')
-
+LOG_LEVEL = 'warning'
 FLAGS_I18N_PREFIX = '/i18n/'
 FLAGS_URL = MEDIA_URL

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 08:56+0200\n"
+"POT-Creation-Date: 2010-09-26 23:25+0200\n"
 "PO-Revision-Date: 2010-05-10 14:52\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,19 +26,23 @@ msgstr "Английский"
 msgid "Hebrew"
 msgstr "Иврит"
 
-#: .\forms.py:21
+#: .\forms.py:20
+msgid "Russian"
+msgstr ""
+
+#: .\forms.py:23
 msgid "Movie Details"
 msgstr "Фильм Подробности"
 
-#: .\forms.py:31
+#: .\forms.py:33
 msgid "Your tags are shared"
 msgstr "Ваши метки являются общими"
 
-#: .\forms.py:56
+#: .\forms.py:58
 msgid "title can't be empty"
 msgstr "Название не может быть пустым"
 
-#: .\forms.py:61
+#: .\forms.py:63
 #, python-format
 msgid "%s already exists"
 msgstr "%s Уже содержит"

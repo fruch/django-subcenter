@@ -1,0 +1,7 @@
+coverage==3.2b3
+nose==0.11.2
+pylint
+django-debug-toolbar==0.8.3
+-e git://github.com/cmheisel/nose-xcover.git#egg=nosexcover
+-e git://github.com/jbalogh/django-nose.git#egg=django-nose
+-e git://git.chris-lamb.co.uk/django-lint.git#egg=django_lint

@@ -2,7 +2,6 @@
 import os,sys
 sys.path.append(os.path.abspath('./common-apps/'))
 sys.path.append(os.path.abspath('..'))
-print sys.path
 
 from django.core.management import execute_manager
 try:

@@ -1,15 +1,11 @@
 *.pyc
-
 deploy/*
-
 public/site_media/(show*|posters|headshots|avatars)*
-
 xmlrunner/*
-
 coverage_html/*
-
 djapian_spaces/*
 /coverage.xml
 /celery.log
 /sub.log
 /pip-log.txt
+pylint_*.txt
