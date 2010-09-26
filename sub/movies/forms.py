@@ -17,6 +17,8 @@ class MovieForm(forms.ModelForm, FieldsetMixin):
                   {'fields': ('title_en','summary_en'), }),
                 (_('Hebrew'),
                   {'fields': ('title_he','summary_he'), }),
+                (_('Russian'),
+                  {'fields': ('title_ru','summary_ru'), }),
                   
                   (_('Movie Details'), {'fields': ('tags', 
                                                    'country',

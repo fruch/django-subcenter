@@ -14,7 +14,7 @@ class SubtitleForm(forms.ModelForm, FieldsetMixin):
                 (_('Details'),
                   {'fields': ('version','trasnlated_by'), }),
                 )
-    
+                #TODO: fix this to include all fields
     class Meta:
         model = Subtitle
     def __init__(self, *args, **kwrds):

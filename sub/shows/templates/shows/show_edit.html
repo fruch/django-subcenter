@@ -89,7 +89,7 @@ $(document).ready(function() {
     {
         $.get("/utils/task-stat/"+task_id+"/", {}  ,
             function(data){
-                if (data.task.status == 'DONE') {
+                if (data.task.status == 'SUCCESS') {
                     callback( data.task.result);
                 } else{
                     setTimeout(get_task_status,  500, task_id, callback);
