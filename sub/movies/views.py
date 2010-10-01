@@ -25,14 +25,9 @@ def edit(request, slug):
             
             if obj.imdb_poster:
                 save_poster(obj, obj.imdb_poster)
-            try:
                 add_cast(obj, form.data['cast'], request.user)
-            except:
-	         pass
-            try:
                 add_genre(obj, form.data['genre'])
-            except:
-	         pass
+
             obj.save()
             return HttpResponseRedirect(reverse("movie_item", args=[obj.slug]))
     else:

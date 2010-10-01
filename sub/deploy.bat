@@ -46,6 +46,12 @@ echo 1) patch coverage_runner
 xcopy /Y .\common-apps\coverage_runner.py .\deploy\Lib\site-packages\django_coverage\coverage_runner.py
 echo 2) make direcorties
 mkdir .\public\site_media\userprofile
+echo 3) patch imdbpy direcorties
+mkdir .\deploy\src\imdbpy
+git checkout 4.6
+git apply ..\..\..\common-apps\patches\imdbpy\*.*
+cd ..\..
+
 echo -----  Running Tests  ------------
 call test.bat
 

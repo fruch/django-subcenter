@@ -6,7 +6,7 @@ Replace these with more appropriate tests for your application.
 """
 
 from django.test import TestCase
-from utils.tasks import findMovieByTitleTask, maintenanceTranslateTask, maintenanceReIndexTask
+from utils.tasks import findMovieByTitleTask, maintenanceTranslateTask, maintenanceReIndexTask, fillActorDataTask
 
 class UtilsTest(TestCase):
     def test_FindMovie(self):
@@ -58,4 +58,8 @@ class UtilsTest(TestCase):
     def test_ReIndexTask(self):
         task = maintenanceReIndexTask.delay()
         self.assertEqual( task.result, True) 
+        
+    def test_fillActorDataTask(self):
+        task = fillActorDataTask.delay(person_id="0491402", save_to_db=True)
+        self.assertEqual( task.result, None)
 

@@ -1,6 +1,6 @@
 Django==1.2.3
 FormEncode==1.2.3dev
-IMDbPY==4.6
+-e git+git://github.com/alberanid/imdbpy.git#egg=IMDbPY
 PIL==1.1.7
 SQLAlchemy==0.6.4
 SQLObject==0.13.0

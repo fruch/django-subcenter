@@ -10,7 +10,11 @@ from utils.imdb_ext import search_movie_by_title
 from utils.imdb_ext import search_person_by_name
 from utils.imdb_ext import update_episodes
 from utils.imdb_ext import getperson_by_id
+
+
 import json
+import log
+logger = log.get_logger()
 
 class findMovieByTitleTask(Task):
     """search a movie/show by it's title, cause use filter on kind (movie, tv series) """
@@ -111,12 +115,18 @@ class fillShowEpisodesTask(Task):
         return info
 
 class fillActorDataTask(Task):
+    
     def run(self, person_id, save_to_db=False,  **kwargs):
+        from utils.helper import translate_with_wiki
+        from persons.models import Actor
+        from persons.views import save_mugshot
         info = {}
-
+        
         person, ok = do_long_imdb_operation(getperson_by_id, args=person_id, timeout=4)
         if ok:
-            try: info['name'] = person['name']
+            
+            print person.keys()
+            try: info['name'] = person['name'].replace(' - IMDb','')
             except KeyError: pass
 
             try: info['bio'] = person['mini biography'][0]
@@ -130,15 +140,13 @@ class fillActorDataTask(Task):
 
             try :  info['birth_date'] = person.data['birth date']
             except KeyError: pass
-
+           
             if save_to_db:
-                from persons.models import Actor
-                from persons.views import save_mugshot
-                from utils.helper import translate_with_wiki
+                
                 act, created = Actor.objects.get_or_create(name_en=info['name'] )
 
-                try: act.bio_en = unicode(info['bio'])
-                except KeyError: pass
+                if 'bio' in info.keys():  
+                    act.bio_en = unicode(info['bio'])
 
                 he_name =  translate_with_wiki('he',info['name'])
                 if he_name is not None:
@@ -150,8 +158,8 @@ class fillActorDataTask(Task):
 
                 act.imdb_url = unicode(info['imdb_url'])
 
-                try: save_mugshot(act, info['headshot'] )
-                except KeyError: pass
+                if 'headshot' in info.keys(): 
+                    save_mugshot(act, info['headshot'] )
 
                 act.save()
         else:
