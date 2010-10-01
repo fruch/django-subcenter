@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-16 07:09-0500\n"
+"POT-Creation-Date: 2010-09-27 18:11+0200\n"
 "PO-Revision-Date: 2009-12-20 22:52\n"
 "Last-Translator: <israel.fruchter@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,61 +16,679 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.4.8\n"
 
-#: base.html:22
+#: .\base.html.py:22
 msgid "Django profile demo"
 msgstr "הדגמה של דג'נגו פרופיל"
 
-#: base.html:23
+#: .\base.html.py:23
 msgid "A django-profile demonstration application"
 msgstr "יישום הדגמה של django-profile"
 
-#: base.html:24
+#: .\base.html.py:24
 msgid "Language"
 msgstr "שפה"
 
-#: base.html:30
+#: .\base.html.py:40
 msgid "Movies"
 msgstr "סרטים"
 
-#: base.html:31
+#: .\base.html.py:41
 msgid "Actors"
 msgstr "שחקנים"
 
-#: base.html:32
+#: .\base.html.py:42
 msgid "TV Shows"
 msgstr "סדרות"
 
-#: base.html:33
+#: .\base.html.py:43 .\userprofile\avatar\search.html.py:32
 msgid "Search"
 msgstr "חיפוש"
 
-#: base.html:34
+#: .\base.html.py:44
 msgid "Frontpage"
 msgstr "דף ראשי"
 
-#: base.html:36
+#: .\base.html.py:46
 msgid "Profile"
 msgstr "פרופיל"
 
-#: base.html:37
+#: .\base.html.py:47
 msgid "Logout"
 msgstr "התנתק"
 
-#: base.html:39
+#: .\base.html.py:49 .\userprofile\account\login.html.py:36
 msgid "Login"
 msgstr "הכנס"
 
-#: base.html:40
+#: .\base.html.py:50 .\userprofile\account\registration.html.py:48
 msgid "Register"
 msgstr "הרשמה"
 
-#: front.html:3
+#: .\front.html.py:3
 msgid "Front page"
 msgstr "דף ראשי"
 
-#: front.html:6
+#: .\front.html.py:6
 msgid "People who have already tried this demo"
 msgstr "אנשים שניסו את הדמו הזה"
+
+#: .\admin\base.html.py:25
+msgid "Welcome,"
+msgstr "ברוך הבא,"
+
+#: .\admin\base.html.py:25
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: .\admin\base.html.py:25 .\userprofile\profile\overview.html.py:83
+msgid "Change password"
+msgstr "שנה סיסמה"
+
+#: .\admin\base.html.py:25
+#, fuzzy
+msgid "Log out"
+msgstr "התנתק"
+
+#: .\admin\base.html.py:30
+msgid "Home"
+msgstr "בית"
+
+#: .\admin\change_language.html.py:2
+#, fuzzy
+msgid "Change language"
+msgstr "שינוי שפה"
+
+#: .\comments\form.html.py:78 .\comments\preview.html.py:90
+#, fuzzy
+msgid "Post"
+msgstr "מיקום"
+
+#: .\comments\form.html.py:79 .\comments\preview.html.py:91
+#, fuzzy
+msgid "Preview"
+msgstr "סקירה"
+
+#: .\comments\preview.html.py:4 .\comments\preview.html.py:70
+msgid "Preview your comment"
+msgstr ""
+
+#: .\comments\preview.html.py:68
+msgid "Please correct the error below"
+msgid_plural "Please correct the errors below"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\comments\preview.html.py:73
+msgid "and"
+msgstr ""
+
+#: .\comments\preview.html.py:73
+msgid "Post your comment"
+msgstr ""
+
+#: .\comments\preview.html.py:73
+#, fuzzy
+msgid "or make changes"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\menu.html.py:5
+msgid "Overview"
+msgstr "סקירה"
+
+#: .\userprofile\menu.html.py:6 .\userprofile\profile\personal.html.py:32
+#: .\userprofile\profile\personal_done.html.py:19
+msgid "Personal information"
+msgstr "מידע אישי"
+
+#: .\userprofile\menu.html.py:7
+msgid "Avatar"
+msgstr "אווטר"
+
+#: .\userprofile\menu.html.py:8 .\userprofile\profile\location.html.py:26
+#: .\userprofile\profile\overview.html.py:60
+#: .\userprofile\profile\public.html.py:38
+msgid "Location"
+msgstr "מיקום"
+
+#: .\userprofile\menu.html.py:9 .\userprofile\profile\delete.html.py:22
+msgid "Remove profile"
+msgstr "הסרת פרופיל"
+
+#: .\userprofile\account\email_validation.html.py:4
+#: .\userprofile\account\email_validation.html.py:23
+msgid "E-mail change"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation.html.py:4
+#: .\userprofile\account\email_validation.html.py:23
+#: .\userprofile\account\email_validation.html.py:40
+#: .\userprofile\account\email_validation_processed.html.py:20
+msgid "Add e-mail"
+msgstr "הוסף דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation.html.py:24
+msgid "New e-mail address"
+msgstr "כתובת דואר אלקטרוני חדשה"
+
+#: .\userprofile\account\email_validation.html.py:34
+msgid "Send confirmation"
+msgstr "שלח אישור"
+
+#: .\userprofile\account\email_validation.html.py:41
+#: .\userprofile\account\email_validation_processed.html.py:21
+msgid ""
+"Insert the new e-mail address. An e-mail will be send to it for testing and "
+"confirmation"
+msgstr ""
+
+#: .\userprofile\account\email_validation_done.html.py:4
+#, fuzzy
+msgid "E-mail validation successful"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation_done.html.py:4
+#, fuzzy
+msgid "E-mail change unsuccessful"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation_done.html.py:14
+#, fuzzy
+msgid "E-mail address validated successfully"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation_done.html.py:16
+msgid ""
+"The key you received via e-mail is no longer valid. Please try the e-mail "
+"validation process again"
+msgstr ""
+
+#: .\userprofile\account\email_validation_done.html.py:23
+#: .\userprofile\account\email_validation_reset_response.html.py:22
+#, fuzzy
+msgid "E-mail validation process"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation_done.html.py:24
+#: .\userprofile\account\email_validation_reset_response.html.py:23
+msgid "You can manage the e-mail validation process from the"
+msgstr ""
+
+#: .\userprofile\account\email_validation_done.html.py:24
+#: .\userprofile\account\email_validation_reset_response.html.py:23
+#, fuzzy
+msgid "overview page"
+msgstr "סקירה"
+
+#: .\userprofile\account\email_validation_processed.html.py:4
+#: .\userprofile\account\email_validation_processed.html.py:13
+#, fuzzy
+msgid "E-mail change processed"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\email_validation_processed.html.py:14
+msgid ""
+"An e-mail has been sent to the new e-mail address to verify and activate it. "
+"Please access to your e-mail and complete this process following the "
+"instructions specified in the e-mail body"
+msgstr ""
+
+#: .\userprofile\account\email_validation_reset_response.html.py:4
+msgid "Validation e-mail sent"
+msgstr ""
+
+#: .\userprofile\account\email_validation_reset_response.html.py:4
+msgid "Your user account was already active"
+msgstr ""
+
+#: .\userprofile\account\email_validation_reset_response.html.py:14
+msgid "We've e-mailed you the e-mail validation link"
+msgstr ""
+
+#: .\userprofile\account\email_validation_reset_response.html.py:16
+msgid "Your e-mail was already validated"
+msgstr ""
+
+#: .\userprofile\account\login.html.py:4
+#: .\userprofile\account\login.html.py:19
+msgid "User login"
+msgstr ""
+
+#: .\userprofile\account\login.html.py:20
+#: .\userprofile\account\registration.html.py:20
+#: .\userprofile\profile\public.html.py:33
+#: .\userprofile\profile\usercard.html.py:11
+#, fuzzy
+msgid "Username"
+msgstr "שם משתמש:"
+
+#: .\userprofile\account\login.html.py:26
+#: .\userprofile\account\registration.html.py:32
+#, fuzzy
+msgid "Password"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\login.html.py:42
+msgid "Utilities"
+msgstr ""
+
+#: .\userprofile\account\login.html.py:44
+#, fuzzy
+msgid "Lost your password?"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\login.html.py:46
+msgid "Sign up!"
+msgstr ""
+
+#: .\userprofile\account\logout.html.py:4
+#: .\userprofile\account\logout.html.py:9
+#, fuzzy
+msgid "Logged out"
+msgstr "התנתק"
+
+#: .\userprofile\account\logout.html.py:10
+msgid "You've been logged out"
+msgstr ""
+
+#: .\userprofile\account\logout.html.py:10
+#, fuzzy
+msgid "Log in again"
+msgstr "דף ראשי"
+
+#: .\userprofile\account\password_change.html.py:4
+#: .\userprofile\account\password_change.html.py:23
+#: .\userprofile\account\password_reset_confirm.html.py:4
+msgid "Password change for"
+msgstr ""
+
+#: .\userprofile\account\password_change.html.py:24
+#, fuzzy
+msgid "Old password"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\password_change.html.py:30
+#: .\userprofile\account\password_reset_confirm.html.py:26
+#, fuzzy
+msgid "New password"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\password_change.html.py:36
+#: .\userprofile\account\password_reset_confirm.html.py:32
+#, fuzzy
+msgid "Confirm password"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\password_change.html.py:46
+#: .\userprofile\account\password_reset_confirm.html.py:42
+#, fuzzy
+msgid "Change"
+msgstr "שנה אווטר"
+
+#: .\userprofile\account\password_change.html.py:52
+#: .\userprofile\account\password_change_done.html.py:19
+#, fuzzy
+msgid "Password change"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\password_change.html.py:53
+#: .\userprofile\account\password_change_done.html.py:20
+msgid ""
+"Password change utility page. Please enter your new password twice so we can "
+"verify you typed it in correctly"
+msgstr ""
+
+#: .\userprofile\account\password_change_done.html.py:4
+#: .\userprofile\account\password_reset_complete.html.py:4
+#, fuzzy
+msgid "Password change successful"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\password_change_done.html.py:13
+msgid "The password has been changed successfully"
+msgstr ""
+
+#: .\userprofile\account\password_expired.html.py:4
+msgid "Password key expired"
+msgstr ""
+
+#: .\userprofile\account\password_expired.html.py:9
+msgid ""
+"The password key you're trying to use is expired. Please, request a new one"
+msgstr ""
+
+#: .\userprofile\account\password_reset.html.py:4
+#: .\userprofile\account\password_reset.html.py:20
+#: .\userprofile\account\password_reset_complete.html.py:19
+#: .\userprofile\account\password_reset_confirm.html.py:55
+#, fuzzy
+msgid "Password reset"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\password_reset.html.py:21
+#, fuzzy
+msgid "E-mail address"
+msgstr "כתובת דואר אלקטרוני חדשה"
+
+#: .\userprofile\account\password_reset.html.py:31
+#, fuzzy
+msgid "Reset my password"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\password_reset.html.py:37
+#: .\userprofile\account\password_reset_done.html.py:16
+msgid "Password reset form"
+msgstr ""
+
+#: .\userprofile\account\password_reset.html.py:38
+#: .\userprofile\account\password_reset_done.html.py:17
+msgid ""
+"Forgotten your password? Enter your e-mail address, and we'll reset your "
+"password and e-mail the new one to you"
+msgstr ""
+
+#: .\userprofile\account\password_reset_complete.html.py:13
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: .\userprofile\account\password_reset_complete.html.py:20
+#: .\userprofile\account\password_reset_confirm.html.py:56
+msgid ""
+"Password reset utility page. Please enter your new password twice so we can "
+"verify you typed it in correctly"
+msgstr ""
+
+#: .\userprofile\account\password_reset_confirm.html.py:47
+#, fuzzy
+msgid "Password reset unsuccessful"
+msgstr "שינוי דואר אלקטרוני"
+
+#: .\userprofile\account\password_reset_confirm.html.py:48
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: .\userprofile\account\password_reset_done.html.py:4
+#: .\userprofile\account\password_reset_done.html.py:9
+msgid "Password reset successful"
+msgstr ""
+
+#: .\userprofile\account\password_reset_done.html.py:10
+msgid ""
+"We've e-mailed you the instructions to obtain a new password. You should be "
+"receiving it shortly"
+msgstr ""
+
+#: .\userprofile\account\registration.html.py:4
+#: .\userprofile\account\registration.html.py:19
+msgid "User registration"
+msgstr ""
+
+#: .\userprofile\account\registration.html.py:26
+msgid "E-mail (optional)"
+msgstr ""
+
+#: .\userprofile\account\registration.html.py:38
+#, fuzzy
+msgid "Password (again)"
+msgstr "שנה סיסמה"
+
+#: .\userprofile\account\registration.html.py:54
+#: .\userprofile\account\registration_done.html.py:14
+msgid "Register a new account"
+msgstr ""
+
+#: .\userprofile\account\registration.html.py:55
+#: .\userprofile\account\registration_done.html.py:15
+msgid ""
+"Joining this community is quick and easy. You only need to fill the form to "
+"get access to all the private content"
+msgstr ""
+
+#: .\userprofile\account\registration_done.html.py:4
+msgid "Registration complete"
+msgstr ""
+
+#: .\userprofile\account\registration_done.html.py:9
+msgid "You have successfully registered a new account. Go to the"
+msgstr ""
+
+#: .\userprofile\account\registration_done.html.py:9
+#, fuzzy
+msgid "login page"
+msgstr "דף ראשי"
+
+#: .\userprofile\account\registration_done.html.py:9
+msgid "to authenticate and start using this site"
+msgstr ""
+
+#: .\userprofile\avatar\choose.html.py:4
+#: .\userprofile\avatar\choose.html.py:36
+msgid "Choose the location of your avatar"
+msgstr ""
+
+#: .\userprofile\avatar\choose.html.py:39
+msgid "Select an image from disk"
+msgstr "בחר תמונה מהדיסק"
+
+#: .\userprofile\avatar\choose.html.py:41
+#: .\userprofile\avatar\choose.html.py:47 .\userprofile\avatar\crop.html.py:47
+msgid "Done"
+msgstr "סיום"
+
+#: .\userprofile\avatar\choose.html.py:45
+msgid ""
+"Select an image from a remote URL. Put the URL on the input below and we'll "
+"retrieve the image for you"
+msgstr ""
+
+#: .\userprofile\avatar\choose.html.py:52
+#: .\userprofile\avatar\search.html.py:4
+#: .\userprofile\avatar\search.html.py:28
+msgid "Search for an image on Picasa Web"
+msgstr ""
+
+#: .\userprofile\avatar\choose.html.py:62 .\userprofile\avatar\crop.html.py:53
+#: .\userprofile\avatar\done.html.py:19 .\userprofile\avatar\search.html.py:50
+#, fuzzy
+msgid "Avatar selection page"
+msgstr "שפה"
+
+#: .\userprofile\avatar\choose.html.py:63 .\userprofile\avatar\crop.html.py:54
+#: .\userprofile\avatar\done.html.py:20 .\userprofile\avatar\search.html.py:51
+msgid ""
+"You have several options to select the image you want as avatar on your "
+"profile"
+msgstr ""
+
+#: .\userprofile\avatar\choose.html.py:69
+msgid "Delete"
+msgstr "מחק"
+
+#: .\userprofile\avatar\crop.html.py:4 .\userprofile\avatar\crop.html.py:31
+msgid "Crop &amp; resize the area you want"
+msgstr ""
+
+#: .\userprofile\avatar\done.html.py:4
+msgid "Avatar selection finished"
+msgstr ""
+
+#: .\userprofile\avatar\done.html.py:13
+msgid "Your new avatar has been saved successfully"
+msgstr ""
+
+#: .\userprofile\avatar\search.html.py:29
+msgid "Search on Picasa Web"
+msgstr ""
+
+#: .\userprofile\profile\delete.html.py:4
+#, fuzzy
+msgid "Delete personal information"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\delete.html.py:14
+#: .\userprofile\profile\delete_done.html.py:18
+#, fuzzy
+msgid "Delete your personal information"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\delete.html.py:15
+msgid "Are you sure?"
+msgstr ""
+
+#: .\userprofile\profile\delete.html.py:15
+msgid "Yes"
+msgstr ""
+
+#: .\userprofile\profile\delete.html.py:23
+msgid ""
+"It erases all your private data except your username. You can refill the "
+"information later if you want to"
+msgstr ""
+
+#: .\userprofile\profile\delete_done.html.py:4
+#, fuzzy
+msgid "Profile removed"
+msgstr "פרופיל"
+
+#: .\userprofile\profile\delete_done.html.py:13
+msgid "Your profile information has been removed successfully"
+msgstr ""
+
+#: .\userprofile\profile\delete_done.html.py:19
+msgid ""
+"Deleting all your personal information will erase all your private data, "
+"except your username. You can refill the information later if you want to"
+msgstr ""
+
+#: .\userprofile\profile\location.html.py:4
+#: .\userprofile\profile\location_done.html.py:4
+#: .\userprofile\profile\personal_done.html.py:4
+#, python-format
+msgid "%(user)s's Dashboard"
+msgstr ""
+
+#: .\userprofile\profile\location.html.py:21
+#, fuzzy
+msgid "Define your location"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\location.html.py:22
+#: .\userprofile\profile\overview.html.py:51
+#: .\userprofile\profile\public.html.py:35
+msgid "Country"
+msgstr ""
+
+#: .\userprofile\profile\location.html.py:28
+#, fuzzy
+msgid "Position"
+msgstr "מיקום"
+
+#: .\userprofile\profile\location.html.py:35
+#: .\userprofile\profile\personal.html.py:26
+msgid "Save"
+msgstr ""
+
+#: .\userprofile\profile\location.html.py:40
+#: .\userprofile\profile\location_done.html.py:19
+#, fuzzy
+msgid "Location information"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\location.html.py:41
+#: .\userprofile\profile\location_done.html.py:20
+#, fuzzy
+msgid "Define your location information"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\location_done.html.py:13
+#: .\userprofile\profile\personal_done.html.py:13
+msgid "Your profile information has been updated successfully"
+msgstr ""
+
+#: .\userprofile\profile\overview.html.py:4
+#: .\userprofile\profile\overview.html.py:32
+msgid "Overview of your profile"
+msgstr ""
+
+#: .\userprofile\profile\overview.html.py:37
+msgid "Change avatar"
+msgstr "שנה אווטר"
+
+#: .\userprofile\profile\overview.html.py:37
+msgid "Add avatar"
+msgstr "הוסף אווטר"
+
+#: .\userprofile\profile\overview.html.py:41
+msgid "Username:"
+msgstr "שם משתמש:"
+
+#: .\userprofile\profile\overview.html.py:42
+msgid "E-mail:"
+msgstr "דואר אלקטרוני:"
+
+#: .\userprofile\profile\overview.html.py:44
+msgid "Not set yet"
+msgstr "טרם נקבע"
+
+#: .\userprofile\profile\overview.html.py:46
+msgid " (Not validated)"
+msgstr "(לא מאומת)"
+
+#: .\userprofile\profile\overview.html.py:55
+#: .\userprofile\profile\overview.html.py:64
+msgid "Not set"
+msgstr "לא מוגדר"
+
+#: .\userprofile\profile\overview.html.py:82
+msgid "Management:"
+msgstr ""
+
+#: .\userprofile\profile\overview.html.py:85
+#, fuzzy
+msgid "Change your e-mail address"
+msgstr "כתובת דואר אלקטרוני חדשה"
+
+#: .\userprofile\profile\overview.html.py:85
+#, fuzzy
+msgid "Add your e-mail address"
+msgstr "כתובת דואר אלקטרוני חדשה"
+
+#: .\userprofile\profile\overview.html.py:86
+msgid "Resend validation e-mail"
+msgstr ""
+
+#: .\userprofile\profile\overview.html.py:90
+#, fuzzy
+msgid "Add location"
+msgstr "מיקום"
+
+#: .\userprofile\profile\overview.html.py:92
+#, fuzzy
+msgid "Change location"
+msgstr "שינוי שפה"
+
+#: .\userprofile\profile\personal.html.py:4
+#: .\userprofile\profile\personal.html.py:23
+#, fuzzy
+msgid "Edit your personal information"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\personal.html.py:33
+#: .\userprofile\profile\personal_done.html.py:20
+#, fuzzy
+msgid "Insert some information about you"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\public.html.py:27
+#, fuzzy, python-format
+msgid "Public profile of %(user)s"
+msgstr "מידע אישי"
+
+#: .\userprofile\profile\usercard.html.py:12
+#, fuzzy
+msgid "Public profile information"
+msgstr "מידע אישי"
 
 #, fuzzy
 #~ msgid "name"
@@ -79,9 +697,6 @@ msgstr "אנשים שניסו את הדמו הזה"
 #, fuzzy
 #~ msgid "Logging"
 #~ msgstr "הכנס"
-
-#~ msgid "Location"
-#~ msgstr "מיקום"
 
 #, fuzzy
 #~ msgid "Misses"
@@ -111,13 +726,6 @@ msgstr "אנשים שניסו את הדמו הזה"
 #~ msgid "None"
 #~ msgstr "סיום"
 
-#~ msgid "Home"
-#~ msgstr "בית"
-
-#, fuzzy
-#~ msgid "Language selection"
-#~ msgstr "שפה"
-
 #, fuzzy
 #~ msgid "Application"
 #~ msgstr "מיקום"
@@ -139,173 +747,12 @@ msgstr "אנשים שניסו את הדמו הזה"
 #~ msgstr "התנתק"
 
 #, fuzzy
-#~ msgid "Username"
-#~ msgstr "שם משתמש:"
-
-#, fuzzy
-#~ msgid "E-mail address"
-#~ msgstr "כתובת דואר אלקטרוני חדשה"
-
-#, fuzzy
-#~ msgid "Password"
-#~ msgstr "שנה סיסמה"
-
-#, fuzzy
 #~ msgid "%s's profile"
 #~ msgstr "פרופיל"
 
 #, fuzzy
 #~ msgid "%s's Avatar"
 #~ msgstr "אווטר"
-
-#~ msgid "Overview"
-#~ msgstr "סקירה"
-
-#~ msgid "Personal information"
-#~ msgstr "מידע אישי"
-
-#~ msgid "Avatar"
-#~ msgstr "אווטר"
-
-#~ msgid "Remove profile"
-#~ msgstr "הסרת פרופיל"
-
-#~ msgid "E-mail change"
-#~ msgstr "שינוי דואר אלקטרוני"
-
-#~ msgid "Add e-mail"
-#~ msgstr "הוסף דואר אלקטרוני"
-
-#~ msgid "New e-mail address"
-#~ msgstr "כתובת דואר אלקטרוני חדשה"
-
-#~ msgid "Send confirmation"
-#~ msgstr "שלח אישור"
-
-#, fuzzy
-#~ msgid "E-mail change unsuccessful"
-#~ msgstr "שינוי דואר אלקטרוני"
-
-#, fuzzy
-#~ msgid "overview page"
-#~ msgstr "סקירה"
-
-#, fuzzy
-#~ msgid "E-mail change processed"
-#~ msgstr "שינוי דואר אלקטרוני"
-
-#, fuzzy
-#~ msgid "Logged out"
-#~ msgstr "התנתק"
-
-#, fuzzy
-#~ msgid "Old password"
-#~ msgstr "שנה סיסמה"
-
-#, fuzzy
-#~ msgid "New password"
-#~ msgstr "שנה סיסמה"
-
-#, fuzzy
-#~ msgid "Confirm password"
-#~ msgstr "שנה סיסמה"
-
-#, fuzzy
-#~ msgid "Change"
-#~ msgstr "שנה אווטר"
-
-#, fuzzy
-#~ msgid "Reset my password"
-#~ msgstr "שנה סיסמה"
-
-#, fuzzy
-#~ msgid "login page"
-#~ msgstr "דף ראשי"
-
-#~ msgid "Select an image from disk"
-#~ msgstr "בחר תמונה מהדיסק"
-
-#~ msgid "Done"
-#~ msgstr "סיום"
-
-#~ msgid "Delete"
-#~ msgstr "מחק"
-
-#, fuzzy
-#~ msgid "Delete personal information"
-#~ msgstr "מידע אישי"
-
-#, fuzzy
-#~ msgid "Delete your personal information"
-#~ msgstr "מידע אישי"
-
-#, fuzzy
-#~ msgid "Profile removed"
-#~ msgstr "פרופיל"
-
-#, fuzzy
-#~ msgid "Position"
-#~ msgstr "מיקום"
-
-#, fuzzy
-#~ msgid "Location information"
-#~ msgstr "מידע אישי"
-
-#, fuzzy
-#~ msgid "Define your location information"
-#~ msgstr "מידע אישי"
-
-#~ msgid "Change avatar"
-#~ msgstr "שנה אווטר"
-
-#~ msgid "Add avatar"
-#~ msgstr "הוסף אווטר"
-
-#~ msgid "Username:"
-#~ msgstr "שם משתמש:"
-
-#~ msgid "E-mail:"
-#~ msgstr "דואר אלקטרוני:"
-
-#~ msgid "Not set yet"
-#~ msgstr "טרם נקבע"
-
-#~ msgid " (Not validated)"
-#~ msgstr "(לא מאומת)"
-
-#~ msgid "Not set"
-#~ msgstr "לא מוגדר"
-
-#~ msgid "Change password"
-#~ msgstr "שנה סיסמה"
-
-#, fuzzy
-#~ msgid "Change your e-mail address"
-#~ msgstr "כתובת דואר אלקטרוני חדשה"
-
-#, fuzzy
-#~ msgid "Add your e-mail address"
-#~ msgstr "כתובת דואר אלקטרוני חדשה"
-
-#, fuzzy
-#~ msgid "Add location"
-#~ msgstr "מיקום"
-
-#, fuzzy
-#~ msgid "Change location"
-#~ msgstr "שינוי שפה"
-
-#, fuzzy
-#~ msgid "Edit your personal information"
-#~ msgstr "מידע אישי"
-
-#, fuzzy
-#~ msgid "Insert some information about you"
-#~ msgstr "מידע אישי"
-
-#, fuzzy
-#~ msgid "Public profile information"
-#~ msgstr "מידע אישי"
 
 #, fuzzy
 #~ msgid "Movie Details"
@@ -342,9 +789,3 @@ msgstr "אנשים שניסו את הדמו הזה"
 #, fuzzy
 #~ msgid "Add Show"
 #~ msgstr "סדרות"
-
-#~ msgid "Welcome,"
-#~ msgstr "ברוך הבא,"
-
-#~ msgid "Documentation"
-#~ msgstr "תיעוד"
