@@ -109,7 +109,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	os.path.join(PROJECT_PATH, 'templates'),
+    os.path.join(PROJECT_PATH, 'templates'),
+    os.path.join(PROJECT_PATH, 'common-apps/templates'),
 )
 
 INSTALLED_APPS = (
@@ -124,25 +125,26 @@ INSTALLED_APPS = (
     'django.contrib.comments',
    
     # main application code
-	'shows',
-	'movies',
-	'persons',
-	'profiles',
+    'shows',
+    'movies',
+    'persons',
+    'profiles',
     'subtitles',
-	'search',
+    'search',
     
     # third partys    
-	'djapian',
-	'userprofile',
-	'utils',
-	'rosetta',
-	'transmeta',
-	'tagging',
-	'djcelery',
-	'ghettoq',
+    'djapian',
+    'userprofile',
+    'utils',
+    'rosetta',
+    'transmeta',
+    'tagging',
+    'djcelery',
+    'ghettoq',
     'flags',
     'south',
-    
+    'photologue',
+    'pressroom',
   # debugging tools
     'debug_toolbar',
     'django_nose',
@@ -159,16 +161,16 @@ DJAPIAN_DATABASE_PATH = os.path.join(PROJECT_PATH, 'djapian_spaces')
 
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_PANELS = (
-	    'debug_toolbar.panels.version.VersionDebugPanel',
-	    'debug_toolbar.panels.timer.TimerDebugPanel',
-	    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-	    'debug_toolbar.panels.headers.HeaderDebugPanel',
-	    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-	    'debug_toolbar.panels.template.TemplateDebugPanel',
-	    'debug_toolbar.panels.sql.SQLDebugPanel',
-	    'debug_toolbar.panels.signals.SignalDebugPanel',
-	    'debug_toolbar.panels.logger.LoggingPanel',
-	)
+        'debug_toolbar.panels.version.VersionDebugPanel',
+        'debug_toolbar.panels.timer.TimerDebugPanel',
+        'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+        'debug_toolbar.panels.headers.HeaderDebugPanel',
+        'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+        'debug_toolbar.panels.template.TemplateDebugPanel',
+        'debug_toolbar.panels.sql.SQLDebugPanel',
+        'debug_toolbar.panels.signals.SignalDebugPanel',
+        'debug_toolbar.panels.logger.LoggingPanel',
+    )
 DEBUG_TOOLBAR_CONFIG = { 'INTERCEPT_REDIRECTS':False,
 }
 TEST_RUNNER = 'utils.test_runner.MyTestRunner'

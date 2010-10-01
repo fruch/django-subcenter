@@ -15,23 +15,22 @@
 - add genre to movies [done]
 - add he name to database search.[done]
 - get he name from edb [done]
-- add filter to imdb summry [ not need, built in imdbpy]
 - add log to failed search in imdb [ done ] 
 - add tests [done]
 - add tv shows and episodes [done]
 - add view to translate genres [done automaticly in creation]
-- get country for movie from imdb
-- add birth date to actors and, etc.
-- add directors
-- add writers
 - add task to automaticly translate names from wiki or other [done]
 - add task to update the translation locales [done]
 - add pylint for all project py files [done]
 - move to nose testing [done]
 - uploaded to a git repo [done]
 - patched a hudson server to compile from git [done]
+- check why flag app isn't working in chrome/iexplore [done]
 
-- check why flag app isn't working in chrome/iexplore
+- get country for movie from imdb
+- add birth date to actors and, etc.
+- add directors
+- add writers
 - add celery tasks for movies/persons templates
 - add subtitle app with flags and full season zip download
 - add a forum

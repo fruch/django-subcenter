@@ -25,6 +25,7 @@ urlpatterns = patterns('',
     (r'^shows/', include('shows.urls')),
     (r'^search/', include('search.urls')),
     (r'^utils/', include('utils.urls')),
+    (r'^news/', include('pressroom.urls')),
     (r'^subtitles/', include('subtitles.urls')),
     (r'^comments/', include('django.contrib.comments.urls')),
 

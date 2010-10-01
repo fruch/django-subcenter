@@ -17,6 +17,7 @@ django-celery==2.0.3
 django-picklefield==0.1.6
 -e svn+http://django-rosetta.googlecode.com/svn/trunk/#egg=rosetta
 -e svn+http://django-tagging.googlecode.com/svn/trunk/#egg=tagging
+-e svn+http://django-pressroom.googlecode.com/svn/trunk/#egg=pressroom
 ghettoq==0.4.4
 importlib==1.0.2
 logilab-astng==0.20.2
