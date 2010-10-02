@@ -129,8 +129,8 @@ class TransMeta(models.base.ModelBase):
                         lang_attr.null = True
                     if not lang_attr.blank:
                         lang_attr.blank = True
-                if lang_attr.verbose_name:
-                    lang_attr.verbose_name = u'%s %s' % (lang_attr.verbose_name, lang_code)
+                #if lang_attr.verbose_name:
+                #    lang_attr.verbose_name = u'%s %s' % (lang_attr.verbose_name, lang_code)
                 attrs[lang_attr_name] = lang_attr
             del attrs[field]
             attrs[field] = property(default_value(field))
