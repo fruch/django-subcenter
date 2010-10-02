@@ -4,27 +4,48 @@
 {% block title %}{% trans "Add/Edit Movie Details" %}{% endblock %}
 {% block extracss %}
     <style>
-        th{ {% if LANGUAGE_BIDI %}text-align: right;{% endif %}
-             background:#F4F4F8;
-        }
-        h2{ {% if LANGUAGE_BIDI %}text-align: right;{% endif %} } 
-        input{ {% if LANGUAGE_BIDI %}float: right;{% endif %} }          
-        select{ {% if LANGUAGE_BIDI %}float: right;{% endif %} } 
-        textarea{ {% if LANGUAGE_BIDI %}float: right;{% endif %} } 
+         label
+        {
+            width: 10em;
+            margin-right: 0.em;
+            position: relative;
+            background:#F4F4F8;
+            {% if LANGUAGE_BIDI %}
+            text-align: right;
+            float: right;
+            {% else %}
+            float: left;
+            text-align: left;
+            {% endif %}
         
         }
 
-        .msg_head {
-        cursor: pointer;
-        position: relative;
-        background:#FFCCCC;
+        .submit input
+        {
+                        
+            margin-left: 4.5em;
         }
-        .msg_body {
-        background:#F4F4F8;
+        input, button {
+         padding: 5px;
+            font-family: Helvetica, sans-serif;
+            font-size: 1.4em;
+            margin: 0px 0px 10px 0px;
+            border: 2px solid #ccc;
+                   
+            width: 150px;
+            font-size: 1.3em;
+            margin-left: 15px;
+            margin-bottom: 15px;
         }
+        
+        
     </style>
 {% endblock %}
 {% block extrajs %}
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
 <script type="text/javascript">
 
 $(document).ready(function() { 
@@ -32,20 +53,7 @@ $(document).ready(function() {
     $("span#loading").toggle();
     
     // ------------- make collapsable ---------------------------------
-    $("tr.msg_body").slice(2,4).toggle();
-    $("tr.msg_body").slice(4,8).toggle();
-    
-    $("tr.msg_head").eq(0).click( function () {
-         $("tr.msg_body").slice(0,2).toggle();
-    });
-    
-    $("tr.msg_head").eq(1).click( function () {
-         $("tr.msg_body").slice(2,4).toggle();
-    });
-    
-    $("tr.msg_head").eq(2).click( function () {
-         $("tr.msg_body").slice(4,8).toggle();
-    });
+     $("#accordion").accordion();
     
     // ----------- populate episode info --------------------------- 
     $('button#populate').click(function () { 
@@ -205,7 +213,7 @@ $(document).ready(function() {
     
     <form enctype="multipart/form-data" action="{{ request.path_info }}" method="post">{% csrf_token %}
         {{ form.errors }}
-        <table {% if LANGUAGE_BIDI %}style="float:right"{% endif %} >{{ form.as_fieldset_table }}</table> 
+        <div id="accordion"> {{ form.as_fieldset_p }} </div>
         <input type="submit" value="{% trans 'Save' %}" />
 	</form>
     

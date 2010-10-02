@@ -32,7 +32,17 @@ class ShowForm(forms.ModelForm, FieldsetMixin):
                 )
     
     
-
+    _tmpl_p = (
+        u'%(title)s<div>%(description)s%(fields)s</div>',
+        u'<h3><a href="#">%s</a></h3>',
+        u'<div class="description">%s</div>',
+        u'<p>%(label)s %(field)s%(help_text)s</p>',
+        u'%s',
+        u'</p>',
+        u' %s',
+        True,
+    )
+    
     class Meta:
         model = Show
         exclude = ('slug', 'creator', )

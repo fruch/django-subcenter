@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load comments %}
 
 {% block title %}{% trans "Details for " %} {{ object.title }}{% endblock %}
 {% block extracss %}
@@ -51,11 +52,43 @@
             {% endif %}
            margin:auto;
         }
+        
+        input#add_comment {
+        padding: 5px;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.4em;
+        margin: 0px 0px 10px 0px;
+        border: 2px solid #ccc;
+               
+        width: 150px;
+        font-size: 1.3em;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        
+        }
     </style>
+{% endblock %}
+{% block extrajs %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.6.custom.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#tabs").tabs();
+    $("#add_comments").toggle();
+    
+    $('input#add_comment').click(function () {
+      $('#add_comments').toggle();
+      var target_top = 1000;
+      $('html, body').animate({scrollTop:target_top}, 500);
+    });
+    
+  });
+  
+
+</script>
 {% endblock %}
 
 {% block content %}
-	<h1>{{ object.title }} <a class="edit" href="{{ object.get_absolute_url }}/edit/">[{% trans "Edit" %}]</a> </h1>  
+    <h1>{{ object.title }} <a class="edit" href="{{ object.get_absolute_url }}/edit/">[{% trans "Edit" %}]</a> </h1>  
     <p> {% if object.poster %}
             <img class="poster" src="{{ object.poster.url }}"/>   
         {% endif %}
@@ -79,5 +112,11 @@
         {{ genre.name }} ,
     {% endfor %}
     </p>
+    
+    <div>{% render_comment_list for object %}</div>
+    <input type="submit" id="add_comment" value='{% trans "Add Comment" %}'/>    
+    <div id="add_comments">{% render_comment_form for object%}
+        
+    </div>
 
 {% endblock %}
