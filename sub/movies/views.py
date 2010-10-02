@@ -10,6 +10,7 @@ import json
 from datetime import datetime
 from utils.helper import save_poster, add_cast ,add_genre
 from utils.imdb_ext import *
+from utils.tasks import findMovieByTitleTask, findMovieByIDTask
             
 @login_required
 def edit(request, slug):
@@ -94,40 +95,10 @@ def imdb_get_info(request, format, movie_id):
     search a movie in imdb by it's id
     '''
     if request.is_ajax():
-        
         info = {}
-        try:
-            movie, ok = do_long_imdb_operation(getmovie_by_id, args=movie_id, timeout=4)
-            
-            try: info['title'] = movie['title']
-            except KeyError: pass
-            
-            try: info['plot'] = movie['plot'][0]
-            except KeyError: pass
-            
-            try: info['rating'] = movie['rating']
-            except KeyError:  pass
-            
-            try: info['cover_url'] = movie['cover url'] 
-            except KeyError: pass
-            
-            try: info['imdb_url'] = "http://www.imdb.com/title/tt"+movie_id+"/"
-            except KeyError: pass
-            
-            try :  info['year'] = movie['year']
-            except KeyError: pass
-            
-            try : 
-                # load seven first actors
-                info['cast']  = str(json.dumps([ {'id':x.personID, 'name':x['long imdb name']} for x in movie['cast'] ][0:7]))
-            except KeyError: pass
-            
-            try :  info['genre'] = str(json.dumps([str(m) for m in movie['genres']]))
-            except KeyError: pass
-            
-        except:
-            info['error'] = True
-            
+        task = findMovieByIDTask.delay(movie_id)
+        info["task_id"] = task.task_id
+ 
         if format == 'xml':
             mimetype = 'application/xml'
             #TODO xml serialize
@@ -148,12 +119,8 @@ def imdb_search_by_title(request, format, title):
     '''
     if request.is_ajax():
         info = {}
-        try:
-            movies, ok = do_long_imdb_operation(search_movie_by_title, args=title, timeout=10)
-            #get only movies
-            info['list'] = [{'id':x.movieID, 'title':x['long imdb canonical title']} for x in movies if x['kind']=='movie']
-        except:
-            info['error'] = True
+        task = findMovieByTitleTask.delay(title, filter=None)
+        info["task_id"] = task.task_id
             
         if format == 'xml':
             mimetype = 'application/xml'

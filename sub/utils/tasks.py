@@ -29,6 +29,42 @@ class findMovieByTitleTask(Task):
         else:
             info['error'] = True
         return info
+        
+class findMovieByIDTask(Task):
+    """search a movie by it's id """
+    def run(self, movie_id,  filter=None):
+        info = {}
+        movie, ok = do_long_imdb_operation(getmovie_by_id, args=movie_id, timeout=4)
+        if ok:    
+            try: info['title'] = movie['title']
+            except KeyError: pass
+            
+            try: info['plot'] = movie['plot'][0]
+            except KeyError: pass
+            
+            try: info['rating'] = movie['rating']
+            except KeyError:  pass
+            
+            try: info['cover_url'] = movie['cover url'] 
+            except KeyError: pass
+            
+            try: info['imdb_url'] = "http://www.imdb.com/title/tt"+movie_id+"/"
+            except KeyError: pass
+            
+            try :  info['year'] = movie['year']
+            except KeyError: pass
+            
+            try : 
+                # load seven first actors
+                info['cast']  = str(json.dumps([ {'id':x.personID, 'name':x['long imdb name']} for x in movie['cast'] ][0:7]))
+            except KeyError: pass
+            
+            try :  info['genre'] = str(json.dumps([str(m) for m in movie['genres']]))
+            except KeyError: pass
+        else:
+            info['error'] = True
+            
+        return info
 
 class findPersonByNameTask(Task):
     def run(self, name):
@@ -166,6 +202,7 @@ class fillActorDataTask(Task):
             info['error'] = True
 
         return info
+        
 
 from celery.task import PeriodicTask
 from datetime import timedelta
